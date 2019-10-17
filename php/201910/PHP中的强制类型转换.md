@@ -1,3 +1,5 @@
+# PHP中的强制类型转换
+
 学过静态语言开发的朋友对类型转换不会陌生，比如Java、C#、C++等。静态语言的好处就是变量强制必须指定类型，这也是编译的要求，所以大部分编译型的语言都会有强制变量类型的要求。而PHP据说也会在PHP8中加入JIT实现编译功能，并且在7.4中就会引入变量声明时的类型指定。下面我们先看看目前PHP中的参数类型及返回值类型的使用。
 
 ```php
@@ -227,7 +229,7 @@ var_dump((binary) new S());
 本文内容会经常出现在面试题中，而且在实际开发中的很多逻辑判断出现的BUG也常常是由于PHP的自动类型转换所导致的，所以这篇文章好好收藏多拿出来看看绝对会让你有意想不到的收获哦！！
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/php%E4%B8%AD%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/php%E4%B8%AD%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.types.type-juggling.php#language.types.typecasting](https://www.php.net/manual/zh/language.types.type-juggling.php#language.types.typecasting)

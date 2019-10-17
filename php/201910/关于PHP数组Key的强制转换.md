@@ -1,3 +1,5 @@
+# 关于PHP数组Key的强制类型转换
+
 PHP是弱类型语言，就像JavaScript一样，在定义变量时，不需要强制指定变量的类型。同时，PHP又有着强大的数组功能，数组的Key即可以是普通的数字类型下标，也可以是字符串类型的Hash键值，那么，当一个数组的Key同时拥有字符串和数字时，会产生什么情况呢？
 
 首先来看下面这样一段代码：
@@ -62,7 +64,7 @@ for ($i = 0; $i < count($a); ++$i) {
 大家先不要运行，直接看代码看看能不能看出这两段代码的输出结果会是什么，然后运行一下，看看结果和你想像的是不是一样。
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/%E5%85%B3%E4%BA%8EPHP%E6%95%B0%E7%BB%84Key%E7%9A%84%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/%E5%85%B3%E4%BA%8EPHP%E6%95%B0%E7%BB%84Key%E7%9A%84%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2.php)
 
 参考资料：
 [https://www.php.net/manual/zh/language.types.array.php](https://www.php.net/manual/zh/language.types.array.php)
