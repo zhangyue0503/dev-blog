@@ -46,7 +46,7 @@ var_dump($c);
 在日常开发中，我们对于一些接口或者数据库ORM框架的使用中会经常用这些功能。比如一些ORM框架的插入、修改需要传入的是只包含属性的对象。这时候就可以使用上述的方法灵活地生成对象而不用完整的定义类模板了。
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/%E4%BC%98%E9%9B%85%E5%9C%B0%E5%88%9B%E5%BB%BA%E6%9C%AA%E5%AE%9A%E4%B9%89PHP%E5%AF%B9%E8%B1%A1.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/%E4%BC%98%E9%9B%85%E5%9C%B0%E5%88%9B%E5%BB%BA%E6%9C%AA%E5%AE%9A%E4%B9%89PHP%E5%AF%B9%E8%B1%A1.php)
 
 参考资料：
 [https://www.php.net/manual/zh/language.types.object.php#117149](https://www.php.net/manual/zh/language.types.object.php#117149)
