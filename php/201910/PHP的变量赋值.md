@@ -142,4 +142,5 @@ echo $v, PHP_EOL;
 [https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/PHP%E7%9A%84%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/PHP%E7%9A%84%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC.php)
 
 参考文档：
+[https://www.php.net/manual/zh/language.variables.basics.php](https://www.php.net/manual/zh/language.variables.basics.php)
 [https://www.php.net/manual/zh/language.oop5.cloning.php](https://www.php.net/manual/zh/language.oop5.cloning.php)
