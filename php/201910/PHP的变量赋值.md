@@ -137,3 +137,9 @@ echo $v, PHP_EOL;
 ```
 
 今天我们更深入的学习和了解了一下PHP中的赋值问题，特别是普通赋值和引用赋值的问题。下回看代码和框架的时候可以注意注意别人是怎么灵活使用这两种赋值的哈，自己也能试试能不能运用这两种方式改造下自己曾经写过的BUG哦！
+
+测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/PHP%E7%9A%84%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/PHP%E7%9A%84%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC.php)
+
+参考文档：
+[https://www.php.net/manual/zh/language.oop5.cloning.php](https://www.php.net/manual/zh/language.oop5.cloning.php)
