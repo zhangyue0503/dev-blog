@@ -51,3 +51,7 @@ echo '"aa" == "aa\n" is ' . ('aa' == "aa\n"), PHP_EOL;
 ```
 
 综上实验结果得知，当字符串的内容都是int数据时，字符串的==比较会忽略在字符串前面出现的空格或者制表符号将它们强制转换成int类型。而只要字符串中包含文本或者特殊符号在数字的后面，就会以文本方式进行比较，如纯文本或者混合文本（"11aa"、"11\n"、"aa11 ")。
+
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/%E6%B3%A8%E6%84%8F%EF%BC%81PHP%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E7%9A%84%E6%AF%94%E8%BE%83.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/%E6%B3%A8%E6%84%8F%EF%BC%81PHP%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E7%9A%84%E6%AF%94%E8%BE%83.php)
+
+参考链接：[https://www.php.net/manual/zh/language.operators.comparison.php](https://www.php.net/manual/zh/language.operators.comparison.php)

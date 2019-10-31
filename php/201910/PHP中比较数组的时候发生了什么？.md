@@ -178,6 +178,6 @@ var_dump(array_equal($arr1, $arr2)); // true
 
 3.**先后顺序，第一个有比较结果了后面就不会继续比较了，全部都相等才会返回相等**
 
-测试代码：[]()
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/PHP%E4%B8%AD%E6%AF%94%E8%BE%83%E6%95%B0%E7%BB%84%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201910/source/PHP%E4%B8%AD%E6%AF%94%E8%BE%83%E6%95%B0%E7%BB%84%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F.php)
 
 参考链接：[https://www.php.net/manual/zh/language.operators.comparison.php](https://www.php.net/manual/zh/language.operators.comparison.php)
