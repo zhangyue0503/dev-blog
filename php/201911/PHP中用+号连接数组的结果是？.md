@@ -131,6 +131,6 @@ ArrayArray
 
 好吧，强转成string类型的字符串再拼接起来了，并无特别的意义。
 
-测试代码：[]()
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E4%B8%AD%E7%94%A8%2B%E5%8F%B7%E8%BF%9E%E6%8E%A5%E6%95%B0%E7%BB%84%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E4%B8%AD%E7%94%A8%2B%E5%8F%B7%E8%BF%9E%E6%8E%A5%E6%95%B0%E7%BB%84%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%EF%BC%9F.php)
 
 参考文档：[https://www.php.net/manual/zh/language.operators.array.php](https://www.php.net/manual/zh/language.operators.array.php)
