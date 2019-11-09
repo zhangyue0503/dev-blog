@@ -103,6 +103,6 @@ switch ($string) {
 
 没错，依然是==比较时的类型强转问题，string和int值比较时强转为了int类型，"2string"强转的结果正是2。因此，在使用switch的时候，应该保证比较值和每个case的类型一致，否则就可能出现不可预计的错误。另外
 
-参考代码：[]()
+参考代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E7%9A%84switch%E5%92%8Cifelse%E8%B0%81%E6%9B%B4%E5%BF%AB%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E7%9A%84switch%E5%92%8Cifelse%E8%B0%81%E6%9B%B4%E5%BF%AB%EF%BC%9F.php)
 
 参考手册：[https://www.php.net/manual/zh/control-structures.switch.php](https://www.php.net/manual/zh/control-structures.switch.php)
