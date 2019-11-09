@@ -53,4 +53,4 @@ echo $a, ',', $b, PHP_EOL;
 
 原来list()还有这样的语法糖，果然还是要不断的学习，一直使用却从未深入了解过的方法竟然能有这么多的用处。不多说了，接着研究手册中其他好玩的东西去咯！
 
-测试代码：[]()
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E5%9C%A8PHP%E4%B8%AD%E7%81%B5%E6%B4%BB%E4%BD%BF%E7%94%A8foreach%2Blist%E5%A4%84%E7%90%86%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E5%9C%A8PHP%E4%B8%AD%E7%81%B5%E6%B4%BB%E4%BD%BF%E7%94%A8foreach%2Blist%E5%A4%84%E7%90%86%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84.php)
