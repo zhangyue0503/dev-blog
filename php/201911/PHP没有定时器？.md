@@ -22,7 +22,9 @@ declare (ticks = 1) {
 
 ```
 
-很简单的代码，运行起来以后将每秒输出当前的时间。declare语法的定义如下：
+很简单的代码，运行起来以后将每秒输出当前的时间。
+
+> declare语法的定义如下：
 
 ```php
 declare (directive)
@@ -64,7 +66,7 @@ declare (ticks = 1) {
 
     $j++; // test_tick:4
 
-    if ($j == 3) { // 判断表达式在结束时计算tick
+    if ($j == 3) { // 条件表达式，不会执行ticks
 
         echo "aa", PHP_EOL; // test_tick:5 \n   test_tick:6，PHP_EOL会计一次ticks
     }
@@ -100,7 +102,7 @@ $j++;
 
 $j++; // test_tick1:2
 
-if ($j == 4) { // 判断表达式不会进行ticks计算
+if ($j == 4) { // 条件表达式，不会执行ticks
     // echo "aa", PHP_EOL;
     echo "aa"; // test_tick:10,test_tick1不执行，没有跳两步，如果用了,PHP_EOL，那么算两步，会输出test_tick1:3
 }
