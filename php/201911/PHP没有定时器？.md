@@ -114,6 +114,6 @@ echo "ddd"; // test_tick1:4
 
 可以看出，我们declare对其定义后续的代码都产生了作用，但需要注意的是如果有页面嵌套，对父页面的后续代码是没有效果的。而定义了ticks=2之后，将在两个低级可计时代码后执行一次register_tick_function()注册的函数代码。
 
-测试代码：[]()
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E6%B2%A1%E6%9C%89%E5%AE%9A%E6%97%B6%E5%99%A8%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E6%B2%A1%E6%9C%89%E5%AE%9A%E6%97%B6%E5%99%A8%EF%BC%9F.php)
 
 参考文档：[https://www.php.net/manual/zh/control-structures.declare.php](https://www.php.net/manual/zh/control-structures.declare.php)
