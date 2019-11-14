@@ -171,7 +171,7 @@ include_all_once('includeandrequire/*');
 
 ```
 
-测试代码：[]()
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%98%8E%E7%99%BDPHP%E4%B8%AD%E7%9A%84include%E5%92%8Crequire.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%98%8E%E7%99%BDPHP%E4%B8%AD%E7%9A%84include%E5%92%8Crequire.php)
 
 参考文档：
 [https://www.php.net/manual/zh/function.require.php](https://www.php.net/manual/zh/function.require.php)
