@@ -262,7 +262,8 @@ print_r($result);
 
 和方法声明参数时一样，在外部使用...操作符给方法传递参数时，也不能在...后面再有其他参数，所以array_merge(...$array1, $array2)的操作会报错。
 
-测试代码：[]()
+测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF.php)
 
 参考文档：
 [https://www.php.net/manual/zh/functions.arguments.php](https://www.php.net/manual/zh/functions.arguments.php)
