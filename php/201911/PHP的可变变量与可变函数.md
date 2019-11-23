@@ -102,6 +102,7 @@ foreach ($funcs as $func) {
 看似很美好很灵活的可变变量与可变函数在我们实际的开发中却很少使用。究其原因当然是可读性不好，代码不仅是写给机器的，也是写给人看的，团队中人员的水平不齐的话过多的使用这两种特性会产生非常多的混乱情况。但是，很多框架代码中会使用这些特性，所以，这也是我们向更高层次迈进所必须要掌握的东西。不管怎么样，学就是了，能在业务场合中使用可变变量或者函数大大节约代码量写出精致易读的代码更能彰显我们的技术实力。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E7%9A%84%E5%8F%AF%E5%8F%98%E5%8F%98%E9%87%8F%E4%B8%8E%E5%8F%AF%E5%8F%98%E5%87%BD%E6%95%B0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E7%9A%84%E5%8F%AF%E5%8F%98%E5%8F%98%E9%87%8F%E4%B8%8E%E5%8F%AF%E5%8F%98%E5%87%BD%E6%95%B0.php)
 
 参考链接：
 [https://www.php.net/manual/zh/language.variables.variable.php](https://www.php.net/manual/zh/language.variables.variable.php)
