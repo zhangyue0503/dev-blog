@@ -135,5 +135,7 @@ var_dump(testJ());
 我们可以看到，PHP在不断的发展中一直在吸取其他语言中的优秀特性。很明显，添加这些类型声明的目的就是为了将来的编译器做准备的。这也是PHP8的一个重要特性，让我们拭目以待吧！
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E6%96%B9%E6%B3%95%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/PHP%E6%96%B9%E6%B3%95%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC.php)
 
-参考文档：[https://www.php.net/manual/zh/functions.returning-values.php][https://www.php.net/manual/zh/functions.returning-values.php]
+参考文档：
+[https://www.php.net/manual/zh/functions.returning-values.php][https://www.php.net/manual/zh/functions.returning-values.php]
