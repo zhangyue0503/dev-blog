@@ -5,6 +5,11 @@ $a = function () {
 };
 $a(); // this is testA
 
+function testA ($a) {
+    var_dump($a); // class Closure#1 (0) {}
+}
+testA($a);
+
 $b = function ($name) {
     echo 'this is ' . $name;
 };
@@ -188,9 +193,9 @@ $fib = function ($n) use (&$fib) {
 
 echo $fib(10);
 
-// https://www.php.net/manual/zh/functions.anonymous.php#119388
-// $fruits = ['apples', 'oranges'];
-// $example = function () use ($fruits[0]) { // Parse error: syntax error, unexpected '[', expecting ',' or ')'
-//     echo $fruits[0]; 
-// };
-// $example();
+https://www.php.net/manual/zh/functions.anonymous.php#119388
+$fruits = ['apples', 'oranges'];
+$example = function () use ($fruits[0]) { // Parse error: syntax error, unexpected '[', expecting ',' or ')'
+    echo $fruits[0]; 
+};
+$example();

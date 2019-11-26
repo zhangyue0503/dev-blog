@@ -15,6 +15,12 @@ $a = function () {
 };
 $a(); // this is testA
 
+
+function testA ($a) {
+    var_dump($a); 
+}
+testA($a); // class Closure#1 (0) {}
+
 $b = function ($name) {
     echo 'this is ' . $name;
 };
@@ -23,7 +29,7 @@ $b('Bob'); // this is Bob
 
 ```
 
-我们将$a和$b两个变量直接赋值为两个函数。这样我们就可以使用变量()的形式调用这两个函数了。
+我们将$a和$b两个变量直接赋值为两个函数。这样我们就可以使用变量()的形式调用这两个函数了。通过testA()方法，我们可以看出闭包函数是可以当做普通参数传递的，因为它自动转换成为了 Closure 类的实例。
 
 ```php
 
