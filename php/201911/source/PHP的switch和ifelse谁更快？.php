@@ -1,13 +1,12 @@
 <?php
 
-$string="2string";
+$string = "2string";
 
-switch($string)
-{
-    case  1:
+switch ($string) {
+    case 1:
         echo "this is 1";
         break;
-    case  2:
+    case 2:
         echo "this is 2";
         break;
     case '2string':
@@ -82,5 +81,3 @@ print("switch: " . (time() - $s) . "sec\n");
 
 // if: 301sec
 // switch: 255sec
-
-

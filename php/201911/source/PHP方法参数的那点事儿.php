@@ -128,7 +128,7 @@ $result = array_merge(...$array1); // Legal, of course: $result == [1,2,3];
 print_r($result);
 $result = array_merge($array2, ...$array1); // $result == [4,1,2,3]
 print_r($result);
-// $result = array_merge(...$array1, $array2); // Fatal error: Cannot use positional argument after argument unpacking.
+$result = array_merge(...$array1, $array2); // Fatal error: Cannot use positional argument after argument unpacking.
 $result = array_merge(...$array1, ...$array3); // Legal! $result == [1,2,3,5,6,7]
 print_r($result);
 
