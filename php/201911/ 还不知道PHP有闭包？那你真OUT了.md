@@ -44,6 +44,8 @@ $c('Charles'); // this is Charles, Age is 16
 
 如果我们需要调用外部的变量，需要使用use关键字来引用外部的变量。这一点和普通函数不一样，因为闭包有着严格的作用域问题。对于全局变量来说，我们可以使用use，也可以使用global。但是对于局部变量（函数中的变量）时，只能使用use。这一点我们后面再说。
 
+> 作用域
+
 ```php
 
 function testD(){
@@ -102,7 +104,7 @@ $g();
 
 ```
 
-> 作用域
+> 类中作用域
 
 关于全局作用域，闭包函数和普通函数的区别不大，主要的区别体现在use作为桥梁进行变量传递时的状态。在类方法中，有没有什么不一样的地方呢？
 
@@ -290,6 +292,7 @@ $this->objs['d'] = new D();
 基于闭包的这种强大能力，现在闭包函数已经在Laravel、TP6等框架中无处不在了。学习无止尽，掌握原理再去学习框架往往更能事半功倍。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E8%BF%98%E4%B8%8D%E7%9F%A5%E9%81%93PHP%E6%9C%89%E9%97%AD%E5%8C%85%EF%BC%9F%E9%82%A3%E4%BD%A0%E7%9C%9FOUT%E4%BA%86.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E8%BF%98%E4%B8%8D%E7%9F%A5%E9%81%93PHP%E6%9C%89%E9%97%AD%E5%8C%85%EF%BC%9F%E9%82%A3%E4%BD%A0%E7%9C%9FOUT%E4%BA%86.php)
 
 参考文档：
 [https://www.php.net/manual/zh/functions.anonymous.php](https://www.php.net/manual/zh/functions.anonymous.php)
