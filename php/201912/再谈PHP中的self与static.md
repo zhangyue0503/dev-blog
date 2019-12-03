@@ -52,6 +52,7 @@ static就比较简单了，例子中都是由B类和C类来调用的A类的stati
 我们也可以转而理解为self是个常量，写在哪里就不会变了，它就是指明当前这个类。而static是个变量，哪个类用到它了它就被赋值成调用它的这个类。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E5%86%8D%E8%B0%88PHP%E4%B8%AD%E7%9A%84self%E4%B8%8Estatic.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E5%86%8D%E8%B0%88PHP%E4%B8%AD%E7%9A%84self%E4%B8%8Estatic.php)
 
 参考文档：
 [https://www.cnblogs.com/mr-amazing/p/5953227.html](https://www.cnblogs.com/mr-amazing/p/5953227.html)
