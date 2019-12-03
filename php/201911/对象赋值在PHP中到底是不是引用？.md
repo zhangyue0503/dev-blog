@@ -58,7 +58,7 @@ Note原文：
 这个内容有点绕，不过这样的内容才能更体现自己的核心能力。读书百遍其义自现，对于手册中的很多知识本人也是来回不断学习才能理解。上面的Note作者写得非常好，英文好的朋友可以直接去看英文原版。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC%E5%9C%A8PHP%E4%B8%AD%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201911/source/%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC%E5%9C%A8PHP%E4%B8%AD%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%EF%BC%9F.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.basic.php](https://www.php.net/manual/zh/language.oop5.basic.php)

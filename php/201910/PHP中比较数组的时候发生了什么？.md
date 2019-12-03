@@ -23,7 +23,7 @@ var_dump([5, 6, 7] > [1, 2, 3, 4]); // false
 ```php
 
 <?php
-// 数组是用标准比较运算符这样比较的
+// 数组用标准比较运算符这样比较的
 function standard_array_compare($op1, $op2)
 {
     if (count($op1) < count($op2)) {
