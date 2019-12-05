@@ -266,7 +266,7 @@ echo $s1 === $s2 ? 's1 === s2' : 's1 !== s2', PHP_EOL;
 
 没想到我们天天用到的构造函数还能玩出这么多花样来吧，日常在开发中比较需要注意的就是子类继承时对构造函数重写时父类构造函数的调用问题以及引用时的析构问题。
 
-测试代码：[]()
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E5%9C%A8PHP%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E5%9C%A8PHP%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.decon.php#105368](https://www.php.net/manual/zh/language.oop5.decon.php#105368)

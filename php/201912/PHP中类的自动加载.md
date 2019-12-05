@@ -76,5 +76,7 @@ var_dump($autoB);
 
 - [深入学习Composer原理（四）](https://mp.weixin.qq.com/s/EEDjqzLcKaAJhQ-VWDBX8w)
 
+测试代码：[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E4%B8%AD%E7%B1%BB%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8A%A0%E8%BD%BD.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E4%B8%AD%E7%B1%BB%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8A%A0%E8%BD%BD.php)
+
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.autoload.php](https://www.php.net/manual/zh/language.oop5.autoload.php)
