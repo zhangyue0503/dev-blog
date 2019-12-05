@@ -20,8 +20,8 @@ class B extends A{
 }
 
 $b = new B();
-$b->selfName();
-$b->staticName();
+$b->selfName(); // I'm A!
+$b->staticName(); // I'm B!
 
 class C extends A{
     public static $name = "I'm C!";
@@ -33,6 +33,6 @@ class C extends A{
 }
 
 $c = new C();
-$c->selfName();
-$c->staticName();
+$c->selfName(); // I'm C!
+$c->staticName(); // I'm C!
 
