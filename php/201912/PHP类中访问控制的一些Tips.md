@@ -115,7 +115,7 @@ $e->testD(); // This is D
 关键访问控制的内容还是比较简单的，最主要的就是private这个修饰符的问题需要注意，其他的其实还是比较好理解的。不过越是简单的东西越是基础，面向对象脱离不了这三个简单的访问修饰符，可见它们在现代软件开发中的份量，牢牢掌握才是我们正确的学习之道。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E7%B1%BB%E4%B8%AD%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%9A%84%E4%B8%80%E4%BA%9BTips.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E7%B1%BB%E4%B8%AD%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%9A%84%E4%B8%80%E4%BA%9BTips.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.visibility.php#87413](https://www.php.net/manual/zh/language.oop5.visibility.php#87413)
