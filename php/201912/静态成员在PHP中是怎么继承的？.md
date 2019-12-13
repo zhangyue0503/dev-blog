@@ -92,7 +92,7 @@ F::t();
 t()输出的三个结果是什么呢？详情可以查看之前的文章[PHP中的Static](https://mp.weixin.qq.com/s/vJc2lXnIg7GCgPkrTh_xsw)
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%9C%A8PHP%E4%B8%AD%E6%98%AF%E6%80%8E%E4%B9%88%E7%BB%A7%E6%89%BF%E7%9A%84%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%9C%A8PHP%E4%B8%AD%E6%98%AF%E6%80%8E%E4%B9%88%E7%BB%A7%E6%89%BF%E7%9A%84%EF%BC%9F.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.static.php](https://www.php.net/manual/zh/language.oop5.static.php)
