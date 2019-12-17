@@ -158,7 +158,7 @@ testUSB方法中的$u并不是某个具体实例，保是USB接口的抽象，�
 掌握好接口的设计原则，往往就能看懂一大半的框架的设计思想。这也是我们面向对象中最最基础的特性。抽象类作为公共基类来说可以为多态提供比较好的范本，它能够让你的子类有自己的个性又能使用父类的能力。总之，深入场景业务，选择合适的方式实现代码，靠的是能力、经验与智慧的综合，决不是一句谁好谁不好所能定性的。
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E7%8E%A9%E8%BD%ACPHP%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/%E7%8E%A9%E8%BD%ACPHP%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.abstract.php](https://www.php.net/manual/zh/language.oop5.abstract.php)
