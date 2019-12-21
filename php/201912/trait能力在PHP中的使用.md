@@ -131,7 +131,7 @@ $f->show();
 trait真的是PHP是非常灵活的一个功能。当然，越是灵活的东西越需要我们去弄明白它的一些使用规则，这样才能避免一些不可预见的错误。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/trait%E8%83%BD%E5%8A%9B%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/trait%E8%83%BD%E5%8A%9B%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.traits.php](https://www.php.net/manual/zh/language.oop5.traits.php)
