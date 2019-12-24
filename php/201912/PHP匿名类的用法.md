@@ -127,7 +127,7 @@ echo $objD1::$name;
 当类中的静态变量修改时，所有类实例的这个静态变量都会跟着变化。这也是普通类静态成员的特性。
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E5%8C%BF%E5%90%8D%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E5%8C%BF%E5%90%8D%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.anonymous.php](https://www.php.net/manual/zh/language.oop5.anonymous.php)
