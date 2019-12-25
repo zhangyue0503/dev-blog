@@ -142,7 +142,7 @@ $d->foo('1');
 不管怎么说，用上述方法实现的方法重载都非常麻烦，因为会让某一个方法或者魔术方法非常重，它需要成为一个控制器来根据参数对内部的方法进行调度。更多的情况下，我们应该还是使用不同的方法名然后抽象公共的部分提取成独立的私有内部方法来实现不同方法名的“重载”。毕竟不同的语言还是要掌握它们不同的个性，并且根据这些个性灵活地运用在我们的项目中。
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E4%B8%AD%E7%9A%84%E2%80%9C%E9%87%8D%E8%BD%BD%E2%80%9D%E6%98%AF%E4%B8%AA%E5%95%A5%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E4%B8%AD%E7%9A%84%E2%80%9C%E9%87%8D%E8%BD%BD%E2%80%9D%E6%98%AF%E4%B8%AA%E5%95%A5%EF%BC%9F.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.overloading.php#77843](https://www.php.net/manual/zh/language.oop5.overloading.php#77843)
