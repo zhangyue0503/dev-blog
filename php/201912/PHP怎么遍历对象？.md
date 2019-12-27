@@ -224,7 +224,7 @@ foreach($c as $k=>$v){
 这里的偏移量就是我们常说的下标。通过实现这四个方法，我们就可以像操作数组一样的操作对象。当然，日常开发中我们可能并不会很经常的使用包括迭代器在内的这些对象遍历的能力。通常我们会直接去将对象转换成数组 (array) obj 来进行下一步的操作。不过，在java中，特别是JavaBean中会经常在类的内部有一个 List<T> 为自己的对象来表示自身的集合状态。通过对比，我们发现PHP也完全可以实现这样的能力，而且使用迭代器和 ArrayAccess 接口还能够更方便的实现类似的能力。这是非常有用的一种知识扩展，或许下一个项目中你就能运用上这些能力哦！
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E6%80%8E%E4%B9%88%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E6%80%8E%E4%B9%88%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%EF%BC%9F.php)
 
 参考文档：
 (https://www.php.net/manual/zh/language.oop5.iterations.php)[https://www.php.net/manual/zh/language.oop5.iterations.php]
