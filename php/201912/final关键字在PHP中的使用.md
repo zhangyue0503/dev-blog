@@ -44,7 +44,7 @@ interface C {
 在Java中，final还可以用来定义常量，但在PHP中，类常量是通过const来定义的。所以final定义不了变量。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/final%E5%85%B3%E9%94%AE%E5%AD%97%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/final%E5%85%B3%E9%94%AE%E5%AD%97%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.final.php](https://www.php.net/manual/zh/language.oop5.final.php)
