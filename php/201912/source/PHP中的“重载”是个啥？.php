@@ -1,14 +1,14 @@
 <?php
 
-// class A{
-//     function foo($a){
-//         echo $a;
-//     }
-//     // Fatal error: Cannot redeclare A::foo()
-//     function foo($a, $b){
-//         echo $a+$b;
-//     }
-// }
+class A{
+    function foo($a){
+        echo $a;
+    }
+    // Fatal error: Cannot redeclare A::foo()
+    function foo($a, $b){
+        echo $a+$b;
+    }
+}
 
 // 重写
 class A
