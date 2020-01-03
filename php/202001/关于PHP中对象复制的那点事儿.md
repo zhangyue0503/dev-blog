@@ -99,7 +99,7 @@ B类中的that指向自身的实例，两个对象相互指向后再进行复制
 上述例子中，我们使用了序列化和反序列化这一招来解决引用问题。对象复制的对象变量来说（对象变量里面还有更多层次的引用变量），这种方式能够一次性地在最顶层的对象__clone()方法中解决引用问题。
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/%E5%85%B3%E4%BA%8EPHP%E4%B8%AD%E5%AF%B9%E8%B1%A1%E5%A4%8D%E5%88%B6%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/%E5%85%B3%E4%BA%8EPHP%E4%B8%AD%E5%AF%B9%E8%B1%A1%E5%A4%8D%E5%88%B6%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.cloning.php](https://www.php.net/manual/zh/language.oop5.cloning.php)
