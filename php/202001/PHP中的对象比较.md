@@ -127,7 +127,7 @@ echo 'c === c1:', $c === $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // FALSE
 对象的比较其实和数组是有些类似的，但它们又有着些许的不同。一个重要的方面就是把握住它们都会进行属性比较，另外还有就是===的差别，数组中===必须是所有属性的类型都相同，而对象中则必须是同一个实例，而且对象只要是同一个实例，使用===就不会在乎它属性值的不同了。
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/PHP%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%AF%94%E8%BE%83.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/PHP%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%AF%94%E8%BE%83.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.object-comparison.php](https://www.php.net/manual/zh/language.oop5.object-comparison.php)
