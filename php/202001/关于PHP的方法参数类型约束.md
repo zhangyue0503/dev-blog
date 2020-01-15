@@ -58,7 +58,7 @@ testE(function($data){
 ```
 
 测试代码：
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/%E5%85%B3%E4%BA%8EPHP%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%BA%A6%E6%9D%9F.md](https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/%E5%85%B3%E4%BA%8EPHP%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%BA%A6%E6%9D%9F.md)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.typehinting.php](https://www.php.net/manual/zh/language.oop5.typehinting.php)
