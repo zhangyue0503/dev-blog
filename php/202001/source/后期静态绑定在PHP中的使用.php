@@ -109,4 +109,10 @@ function who()
 }
 
 H::test(); // H
+// xxx:a,b
+// I:c,d
+// H:e,f
 I::test(); // I
+// xxx:a,b
+// I:c,d
+// H:e,f

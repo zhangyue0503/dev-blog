@@ -148,6 +148,7 @@ I::test(); // I
 注意，如果forward_static_call()不指定类名的话，将调用全局的方法。forward_static_call_array()则是将参数使用数组进行传递。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/%E5%90%8E%E6%9C%9F%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/%E5%90%8E%E6%9C%9F%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.oop5.late-static-bindings.php](https://www.php.net/manual/zh/language.oop5.late-static-bindings.php)
