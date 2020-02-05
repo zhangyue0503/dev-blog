@@ -94,6 +94,17 @@ echo '-----', PHP_EOL;exit;
 当对象中包含自身相互的引用时，想要通过设置为NULL或者unset()来调用析构函数可能会出现问题。
 
 ```php
+class E
+{
+    public $name;
+    public $obj;
+    public function __destruct()
+    {
+        echo "E：析构函数被调用，" . $this->name, PHP_EOL;
+        echo '-----', PHP_EOL;
+    }
+}
+
 $e1 = new E();
 $e1->name = 'e1';
 $e2 = new E();
