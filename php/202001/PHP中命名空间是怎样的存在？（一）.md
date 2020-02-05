@@ -167,6 +167,7 @@ $oA->test(); // FILE1-2\ObjectA
 ```
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/PHP%E4%B8%AD%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%E5%AD%98%E5%9C%A8%EF%BC%9F%EF%BC%88%E4%B8%80%EF%BC%89.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/PHP%E4%B8%AD%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%E5%AD%98%E5%9C%A8%EF%BC%9F%EF%BC%88%E4%B8%80%EF%BC%89.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.namespaces.rationale.php](https://www.php.net/manual/zh/language.namespaces.rationale.php)
