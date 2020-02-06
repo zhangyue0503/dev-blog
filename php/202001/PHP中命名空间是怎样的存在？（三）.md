@@ -78,7 +78,8 @@ new D\E()的解析:
 为了引用全局命名空间中的全局类，必须使用完全限定名称 new \C()。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/namespace/file6.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/namespace/file6.php)
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/namespace/file7.php]https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/namespace/file7.php()
 
 参考文档：
 [https://www.php.net/manual/zh/language.namespaces.global.php](https://www.php.net/manual/zh/language.namespaces.global.php)
