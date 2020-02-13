@@ -57,6 +57,3 @@ static就比较简单了，例子中都是由B类和C类来调用的A类的stati
 参考文档：
 [https://www.cnblogs.com/mr-amazing/p/5953227.html](https://www.cnblogs.com/mr-amazing/p/5953227.html)
 [https://www.php.net/manual/zh/language.oop5.constants.php](https://www.php.net/manual/zh/language.oop5.constants.php)
-
-
-

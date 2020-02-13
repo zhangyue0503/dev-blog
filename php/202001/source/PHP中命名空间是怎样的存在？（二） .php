@@ -26,8 +26,6 @@ FILE42\testA42(); // FILE42\testA()
 
 // 非限定名称、限定名称、完全限定名称
 
-// use FILE41\testA41;
-// testA41();
 use MyProject\FILE32\objectA32 as obj32;
 
 $o = new obj32(); // 非限定名称

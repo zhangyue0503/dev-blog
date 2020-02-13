@@ -11,7 +11,7 @@ function strlen($str)
 {
     return __NAMESPACE__ . '：' . (\strlen($str) - 1);
 }
-echo strlen('abc'), PHP_EOL; // FILE7：2
+echo strlen('abc'), PHP_EOL; // FILE7：2 
 echo \strlen('abc'), PHP_EOL; // 3
 
 echo strtoupper('abc'), PHP_EOL; // ABC
