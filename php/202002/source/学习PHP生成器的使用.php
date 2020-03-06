@@ -29,7 +29,7 @@ $start_time = microtime(true);
 function test2($clear = false)
 {
     $arr = [];
-    if($clear){
+    if ($clear) {
         $arr = null;
         return;
     }
@@ -86,7 +86,6 @@ foreach (test4() as $t) {
     echo $t, PHP_EOL;
 }
 
-
 // 1
 // 2
 // 3
@@ -104,7 +103,7 @@ function test5()
     }
 }
 
-foreach (test5() as $k=>$t) {
+foreach (test5() as $k => $t) {
     echo $k . ':' . $t, PHP_EOL;
 }
 
@@ -125,14 +124,14 @@ function test6()
     for ($i = 0; $i < 10; $i++) {
         // 正常获取循环值，当外部send过来值后，yield获取到的就是外部传来的值了
         $data = (yield $i + 1);
-        if($data == 'stop'){
+        if ($data == 'stop') {
             return;
         }
     }
 }
 $t6 = test6();
-foreach($t6 as $t){
-    if($t == 3){
+foreach ($t6 as $t) {
+    if ($t == 3) {
         $t6->send('stop');
     }
     echo $t, PHP_EOL;
@@ -142,7 +141,27 @@ foreach($t6 as $t){
 // 2
 // 3
 
+// yield from 语法
+function test7()
+{
+    yield from [1, 2, 3, 4];
+    yield from new ArrayIterator([5, 6]);
+    yield from test1();
+}
+foreach (test7() as $t) {
+    echo 'test7：', $t, PHP_EOL;
+}
 
+// test7：1
+// test7：2
+// test7：3
+// test7：4
+// test7：5
+// test7：6
+// test7：1
+// test7：2
+// test7：3
+// test7：1000
 
 $c = count(test1()); // Warning: count(): Parameter must be an array or an object that implements Countable
 // echo $c, PHP_EOL;

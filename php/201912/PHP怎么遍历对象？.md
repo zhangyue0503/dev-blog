@@ -227,4 +227,4 @@ foreach($c as $k=>$v){
 [https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E6%80%8E%E4%B9%88%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E6%80%8E%E4%B9%88%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%EF%BC%9F.php)
 
 参考文档：
-(https://www.php.net/manual/zh/language.oop5.iterations.php)[https://www.php.net/manual/zh/language.oop5.iterations.php]
+[https://www.php.net/manual/zh/language.oop5.iterations.php](https://www.php.net/manual/zh/language.oop5.iterations.php)

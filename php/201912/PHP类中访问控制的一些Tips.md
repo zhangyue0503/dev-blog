@@ -56,11 +56,11 @@ $b->testB(); // 没有b-private
 
 ```
 
-从上述代码中很清晰的可以看出，除了public之外的变量都不能在类外部直接调用或者赋值。所以我们使用setXXX()的public方法来为$private和$protected赋值。这里就出现了封装了概念了，比如在setPrivate()中我们就可以对传递过来的$p变量进行逻辑判断而决定是否将值赋给$private。
+从上述代码中很清晰的可以看出，除了public之外的变量都不能在类外部直接调用或者赋值。所以我们使用setXXX()的public方法来为$private和$protected赋值。这里就出现了封装的概念了，比如在setPrivate()中我们就可以对传递过来的$p变量进行逻辑判断而决定是否将值赋给$private。
 
 B类继承了A类，所以它可以访问到A类的$public和$protected变量，但是，请注意，$private变量是无法访问到的。所以即使调用了setPrivate()方法为$private赋值了，但因为B无法访问，所以依然取不到$private的值。有小伙伴要问了，这种情况不报错？当然不会报错，B类会在自己的范围内查找$private变量，没有定义的话就会生成一个局部的变量并赋值为空。
 
-那么子类要什么$private应该怎么办呢？
+那么子类要使用$private应该怎么办呢？
 
 ```php
 class C extends A {
@@ -112,7 +112,7 @@ $e->testD(); // This is D
 
 ### **总结**
 
-关键访问控制的内容还是比较简单的，最主要的就是private这个修饰符的问题需要注意，其他的其实还是比较好理解的。不过越是简单的东西越是基础，面向对象脱离不了这三个简单的访问修饰符，可见它们在现代软件开发中的份量，牢牢掌握才是我们正确的学习之道。
+关于访问控制的内容还是比较简单的，最主要的就是private这个修饰符的问题需要注意，其他的其实还是比较好理解的。不过越是简单的东西越是基础，面向对象脱离不了这三个简单的访问修饰符，它们在现代软件开发中的份量十足，只有牢牢掌握它们才是我们正确的学习之道。
 
 测试代码：
 [https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E7%B1%BB%E4%B8%AD%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%9A%84%E4%B8%80%E4%BA%9BTips.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/201912/source/PHP%E7%B1%BB%E4%B8%AD%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%9A%84%E4%B8%80%E4%BA%9BTips.php)

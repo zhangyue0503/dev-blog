@@ -204,6 +204,35 @@ foreach($t6 as $t){
 
 上述代码理解起来可能比较绕，但是注意记住注释的那行话就行了（正常获取循环值，当外部send过来值后，yield获取到的就是外部传来的值了）。另外，变量获取 yield 的值，必须要用括号括起来。
 
+### yield from 语法
+
+yield from 语法其实就是指的从另一个可迭代对象中一个一个的获取数据并形成生成器返回。直接看代码。
+
+```php
+function test7()
+{
+    yield from [1, 2, 3, 4];
+    yield from new ArrayIterator([5, 6]);
+    yield from test1();
+}
+foreach (test7() as $t) {
+    echo 'test7：', $t, PHP_EOL;
+}
+
+// test7：1
+// test7：2
+// test7：3
+// test7：4
+// test7：5
+// test7：6
+// test7：1
+// test7：2
+// test7：3
+// test7：1000
+```
+
+在 test7() 方法中，我们使用 yield from 分别从普通数组、迭代器对象、另一个生成器中获取数据并做为当前生成器的内容进行返回。
+
 ## 小惊喜
 
 ### 生成器可以用count获取数量吗？
