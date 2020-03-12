@@ -1,8 +1,3 @@
-
-
-
-https://www.php.net/manual/zh/language.oop5.traits.php#116907
-
 # trait能力在PHP中的使用
 
 相信大家对trait已经不陌生了，早在5.4时，trait就已经出现在了PHP的新特性中。当然，本身trait也是特性的意思，但这个特性的主要能力就是为了代码的复用。

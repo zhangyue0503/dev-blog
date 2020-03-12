@@ -69,6 +69,3 @@ echo 'Total ', $fileSize, PHP_EOL;
 《PHP7编程实战》
 [https://www.php.net/manual/en/class.recursivedirectoryiterator.php](https://www.php.net/manual/en/class.recursivedirectoryiterator.php)
 [https://www.php.net/manual/en/class.splfileinfo.php](https://www.php.net/manual/en/class.splfileinfo.php)
-
-
-
