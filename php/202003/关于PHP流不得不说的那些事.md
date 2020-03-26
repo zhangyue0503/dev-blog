@@ -61,7 +61,8 @@ echo file_get_contents("php://input");
 ```
 
 非常简单，这里我们直接使用 postman 来模拟这种请求，可以看我们是能够正常接收到 body raw 里面的内容的。见下图：
-[]()
+
+![https://raw.githubusercontent.com/zhangyue0503/dev-blog/master/php/202003/img/WX20200319-085631%402x.png](https://raw.githubusercontent.com/zhangyue0503/dev-blog/master/php/202003/img/WX20200319-085631%402x.png)
 
 ## memory 、 temp 内存及临时文件流
 

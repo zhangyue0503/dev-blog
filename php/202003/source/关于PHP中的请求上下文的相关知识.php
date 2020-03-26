@@ -17,8 +17,7 @@ $opts = [
 
 $context = stream_context_create($opts);
 $result = file_get_contents('http://localhost:8088/?a=1', false, $context);
-var_dump($http_response_header);
-
+// var_dump($http_response_header);
 echo $http_response_header;exit;
 
 // 使用fopen获取响应头及内容
