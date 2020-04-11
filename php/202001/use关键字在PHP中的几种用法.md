@@ -66,3 +66,4 @@ test(function ($c) use ($a) {
 这个就有点意思了吧，方法中要调用外部的变量是需要global的，在这里我们直接通过use()也是可以将变量传递过去的。而且这个仅限于在匿名函数中使用。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/use%E5%85%B3%E9%94%AE%E5%AD%97%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%A8%E6%B3%95.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202001/source/use%E5%85%B3%E9%94%AE%E5%AD%97%E5%9C%A8PHP%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%A8%E6%B3%95.php)
