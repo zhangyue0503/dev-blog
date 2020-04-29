@@ -213,6 +213,7 @@ echo '所有引用成空：', $a, '===', $b, '===', $c, PHP_EOL;
 这一次算是比较彻底的把引用说了个透。关于PHP的引用只要记住了它的定义就非常好理解了，最直观的就是当成是操作系统的快捷方式就好了，并没有我们想象中的那么难，和C的指针相比真的只是娃娃级别，多多练习多多复习自然就能很好地掌握使用啦！
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%98%8E%E7%99%BDPHP%E7%9A%84%E4%B8%AD%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%98%8E%E7%99%BDPHP%E7%9A%84%E4%B8%AD%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.references.whatare.php](https://www.php.net/manual/zh/language.references.whatare.php)

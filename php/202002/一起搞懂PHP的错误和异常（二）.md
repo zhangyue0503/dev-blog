@@ -150,7 +150,7 @@ try {
 异常相关的使用就是这些了，通过这两篇文章，相信大家已经对PHP的错误和异常有了一些直观的了解了。接下来的文章我们将一起对比下错误和异常，并且说明一下PHP7对错误有了哪些改进。内容依然精彩，值得期待哦！！
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E4%B8%80%E8%B5%B7%E6%90%9E%E6%87%82PHP%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%88%E4%BA%8C%EF%BC%89.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E4%B8%80%E8%B5%B7%E6%90%9E%E6%87%82PHP%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%88%E4%BA%8C%EF%BC%89.php)
 
 参考文档：
 [https://www.cnblogs.com/init-007/p/11242813.html](https://www.cnblogs.com/init-007/p/11242813.html)
