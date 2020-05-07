@@ -118,7 +118,7 @@ test(a+-); // Parse error: syntax error, unexpected ')'
 下一篇我们将继续学习下一个知识点：**异常**及其处理机制。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E4%B8%80%E8%B5%B7%E6%90%9E%E6%87%82PHP%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%88%E4%B8%80%EF%BC%89.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E4%B8%80%E8%B5%B7%E6%90%9E%E6%87%82PHP%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%88%E4%B8%80%EF%BC%89.php)
 
 参考文档：
 [https://www.cnblogs.com/zyf-zhaoyafei/p/6928149.html](https://www.cnblogs.com/zyf-zhaoyafei/p/6928149.html)

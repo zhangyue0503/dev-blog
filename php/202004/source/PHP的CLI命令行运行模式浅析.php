@@ -26,7 +26,6 @@ print_r($argv);
 //     [3] => 3
 // )
 
-// php-cgi -C dev-blog/php/202004/source/PHP的CLI命令行运行模式浅析.php 1 2 3
 
 // php -r 参数
 // php -r "var_dump($argv);" app 
@@ -54,6 +53,9 @@ print_r($argv);
 
 // 输出 PHP 中加载的模块
 // php -m
+
+// 查看模块详细信息
+// php --ri swoole  
 
 // 显示去除了注释和多余空白的源代码
 // php -w dev-blog/php/202004/source/PHP的CLI命令行运行模式浅析.php

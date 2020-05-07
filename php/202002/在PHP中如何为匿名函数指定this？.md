@@ -50,6 +50,7 @@ $func->call($lily, 'well'); // Lily：well
 其实包括闭包函数在内，这些特性都非常像JS。这也是语言融合的一种趋势，不管是学习了JS来看PHP的这些特性还是先学了PHP再去看JS，都会让我们更容易理解它们的作用与能力，这就是语言特性融合带来的好处。不管怎么样，学就是了，继续加油吧！！
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E5%9C%A8PHP%E4%B8%AD%E5%A6%82%E4%BD%95%E4%B8%BA%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E6%8C%87%E5%AE%9Athis%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E5%9C%A8PHP%E4%B8%AD%E5%A6%82%E4%BD%95%E4%B8%BA%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E6%8C%87%E5%AE%9Athis%EF%BC%9F.php)
 
 参考文档：
 [https://www.php.net/manual/zh/functions.anonymous.php](https://www.php.net/manual/zh/functions.anonymous.php)

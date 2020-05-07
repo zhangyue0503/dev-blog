@@ -102,6 +102,7 @@ try{
 通过这三篇文章，可以说我们基本上能够清楚地了解PHP中错误和异常的区别、特点以及他们的使用场景，并且能够针对不同的错误和异常进行相应的处理了。当然，相关的内容其实还有很多，将来在发现类似的内容时我们还会通过单独的文章来进行独立的讲解。这次我们就先完结了总体的错误和异常的学习哈。接下来的学习将继续围绕PHP官方文档进行，后续依然精彩！！
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E4%B8%80%E8%B5%B7%E6%90%9E%E6%87%82PHP%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%88%E4%B8%89%EF%BC%89.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E4%B8%80%E8%B5%B7%E6%90%9E%E6%87%82PHP%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%88%E4%B8%89%EF%BC%89.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.errors.php7.php](https://www.php.net/manual/zh/language.errors.php7.php)

@@ -274,7 +274,7 @@ foreach ($fibo as $value) {
 生成器绝对是PHP中的一个隐藏的宝藏，不仅是对于内存节约来说，而且语法其实也非常的简洁明了。我们不需要在方法内部再多定义一个数组去存储返回值，直接 yield 一项一项的返回就可以了。在实际的项目中完全值得尝试一把，但是尝试完了别忘了和小伙伴们分享，大部分人可能真的没有接触过这个特性哦！！
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E5%AD%A6%E4%B9%A0PHP%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/%E5%AD%A6%E4%B9%A0PHP%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8.php)
 
 参考文档：
 [https://www.php.net/manual/zh/language.generators.overview.php](https://www.php.net/manual/zh/language.generators.overview.php)

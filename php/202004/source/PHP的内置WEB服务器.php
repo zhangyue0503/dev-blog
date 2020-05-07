@@ -1,7 +1,5 @@
 <?php
 
-echo $_SERVER['pathinfo'];
-
 $routePages = [
     '/testRoute2.php',
     '/route/testRoute1.php'
@@ -9,8 +7,6 @@ $routePages = [
 
 if(in_array($_SERVER['REQUEST_URI'], $routePages)){
     include __DIR__ . $_SERVER['REQUEST_URI'];
-   
-    
 }else{
     print_r($_SERVER);
 }
