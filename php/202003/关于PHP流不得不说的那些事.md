@@ -1,6 +1,6 @@
-# 那些对php://伪协议迷糊的人不得不了解的事
+# 关于PHP流不得不说的那些事
 
-相信不少PHP开发者或多或少都见过类似于"php://input"或者"php://output"这样的内容，很多人都知道这两个的作用一个是接收的 POST 请求中的原始 body 内容，另一个其实和 echo 之类的输出一样是进行输出的。当然，我们的文章内容不会如此的简单，其实类似这样的 php:// 开头的协议还有好几种，它们共同称为 PHPIO流协议（PHP输入/输出流协议） 。
+相信不少PHP开发者或多或少都见过类似于 "php://input" 或者 "php://output" 这样的内容，很多人都知道这两个的作用一个是接收的 POST 请求中的原始 body 内容，另一个其实和 echo 之类的输出一样是进行输出的。当然，我们的文章内容不会如此的简单，其实类似这样的 php:// 开头的协议还有好几种，它们共同称为 PHPIO流协议（PHP输入/输出流协议） 。
 
 这种协议有什么用呢？我们知道计算机中正常的协议有 http:// ，这是我们做web开发最熟悉的。还有 file:// 表示文件，ftp:// 表示ftp协议，当然，还有一些不太常用的 zlib:// 、 data:// 、 rar:// ，等等，这些协议PHP都是支持的，而且这些协议都是约定俗成的并且有相应的文件或流类型支持的协议。通过这些协议我们的程序可以读取、解析这些协议所对应的相关内容。比如说http协议，服务器、客户端浏览器都是因为支持了相同的http协议规范，所以才能够通过这个协议来进行传输，而传输的内容是什么呢？正是我们看到的网页或接口文本。而今天我们的主角 php:// 协议，其实也有另一个别名是 PHP伪协议 。伪协议的原因其实就是这种协议只是PHP自身所支持的并定义的一种协议，而且也仅仅只是 IO 相关操作的一种协议规范。
 
@@ -54,7 +54,7 @@ echo PHP_EOL;
 
 ## input 访问请求的原始数据的只读流
 
-这个相信做过接口开发的大多数人都会接触过。当前端或客户端使用 body raw 方便发送数据时，就使用这个协议来接收POST中的原始 body 内容。
+这个相信做过接口开发的大多数人都会接触过。当前端或客户端使用 body raw 方式发送数据时，就使用这个协议来接收POST中的原始 body 内容。
 
 ```php
 echo file_get_contents("php://input");
@@ -95,6 +95,10 @@ echo file_get_contents("php://filter/read=convert.base64-encode/resource=http://
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/%E5%85%B3%E4%BA%8EPHP%E6%B5%81%E4%B8%8D%E5%BE%97%E4%B8%8D%E8%AF%B4%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/%E5%85%B3%E4%BA%8EPHP%E6%B5%81%E4%B8%8D%E5%BE%97%E4%B8%8D%E8%AF%B4%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.php)
+
 参考文档：
+
 [https://www.php.net/manual/zh/wrappers.php.php](https://www.php.net/manual/zh/wrappers.php.php)
+
 [https://www.php.net/manual/zh/filters.php](https://www.php.net/manual/zh/filters.php)

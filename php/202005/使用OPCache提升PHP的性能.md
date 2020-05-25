@@ -49,11 +49,11 @@ ps -ef | grep "php-fpm: master" | grep -v grep | cut -c 9-15 | xargs kill -USR2
 
 首先我们来看未开启 OPcache 的情况。
 
-[]()
+![https://raw.githubusercontent.com/zhangyue0503/dev-blog/master/php/202005/img/ab1.png](https://raw.githubusercontent.com/zhangyue0503/dev-blog/master/php/202005/img/ab1.png)
 
 接下来是开启了 OPcache 的情况。
 
-[]()
+![https://raw.githubusercontent.com/zhangyue0503/dev-blog/master/php/202005/img/ab2.png](https://raw.githubusercontent.com/zhangyue0503/dev-blog/master/php/202005/img/ab2.png)
 
 很明显，性能有了很大的提高。不仅速度快了很多，吞吐率也是直接上升了几倍。当然，这只是非常简单的一个测试，不过总体看来，确实对单机的性能提升有很大的帮助。最最主要的是，同样的并发情况下，CPU 资源也比未开启的状态下低了70%。
 

@@ -11,7 +11,7 @@ $func = function($say){
 $func('good'); // Fatal error: Uncaught Error: Using $this when not in object context 
 ```
 
-在这个匿名函数中，我们使用了 $this->name 来获取当前作用域下的 $name 属性，可是，这个 $this 是谁呢？我们并没有定义它，所以这里会直接报错。错误信息是：使用了 $this 但是没有对象上下文，也就是说没有指定 $this 引用的作用域。
+在这个匿名函数中，我们使用了 \\$this->name 来获取当前作用域下的 $name 属性，可是，这个 $this 是谁呢？我们并没有定义它，所以这里会直接报错。错误信息是：使用了 $this 但是没有对象上下文，也就是说没有指定 $this 引用的作用域。
 
 ## bindTo() 方法绑定 $this
 

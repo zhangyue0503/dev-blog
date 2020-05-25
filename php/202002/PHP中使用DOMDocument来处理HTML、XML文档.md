@@ -159,7 +159,7 @@ print $xml->saveXML();
 通过上面两个简单的小例子，相信大家已经对这个 DOMDocument 操作XML类文件解析的方式非常感兴趣了。不过相对于正则解析的方式它们的性能有多大的差异并没有找到相关的测试，不过一般正常的情况下网站的HMTL文档都不会太大，毕竟各个网站也会考虑自身的加载速度，如果文档非常大的话用户体验也会很差，所以这套接口用来进行日常爬虫的分析处理工作基本是没有任何问题的。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/PHP%E4%B8%AD%E4%BD%BF%E7%94%A8DOMDocument%E6%9D%A5%E5%A4%84%E7%90%86HTML%E3%80%81XML%E6%96%87%E6%A1%A3.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202002/source/PHP%E4%B8%AD%E4%BD%BF%E7%94%A8DOMDocument%E6%9D%A5%E5%A4%84%E7%90%86HTML%E3%80%81XML%E6%96%87%E6%A1%A3.php)
 
 参考文档：
 [https://www.php.net/manual/zh/class.domdocument.php](https://www.php.net/manual/zh/class.domdocument.php)
