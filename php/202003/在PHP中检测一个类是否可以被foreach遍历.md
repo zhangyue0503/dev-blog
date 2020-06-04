@@ -29,7 +29,7 @@ $obj2 = new Obj2();
 echo $obj2 instanceof Traversable ? 'yes' : 'no', PHP_EOL; // yes
 ```
 
-从上面的例子中可以看出，每一个 $obj1 无法通过 Traversable 判断，所以它是不能被遍历的。而第二个 $obj2 则是实现了迭代器接口，这个对象是可以通过 Traversable 判断的。在PHP手册中，Traversable 接口正是用于检测一个类是否可以被 foreach 遍历的接口。
+从上面的例子中可以看出，每一个 \\$obj1 无法通过 Traversable 判断，所以它是不能被遍历的。而第二个 $obj2 则是实现了迭代器接口，这个对象是可以通过 Traversable 判断的。在PHP手册中，Traversable 接口正是用于检测一个类是否可以被 foreach 遍历的接口。
 
 这个接口有几个特点：
 
@@ -77,6 +77,7 @@ foreach ($obj3 as $o3) {
 其实，数组本身就是天然的可迭代对象。这里虽然进行了类型强转，但其实应该将数组强转的对象视为默认实现了迭代的器的对象更合适。当然，这类接口更大的意义还是在于代码规范及强制检查方面。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/%E5%9C%A8PHP%E4%B8%AD%E6%A3%80%E6%B5%8B%E4%B8%80%E4%B8%AA%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A2%ABforeach%E9%81%8D%E5%8E%86.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/%E5%9C%A8PHP%E4%B8%AD%E6%A3%80%E6%B5%8B%E4%B8%80%E4%B8%AA%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A2%ABforeach%E9%81%8D%E5%8E%86.php)
 
 参考文档：
 [https://www.php.net/manual/zh/class.traversable.php](https://www.php.net/manual/zh/class.traversable.php)

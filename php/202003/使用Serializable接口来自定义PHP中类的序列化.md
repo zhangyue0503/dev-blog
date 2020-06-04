@@ -148,8 +148,10 @@ var_dump(unserialize(str_replace('O:', 'C:', "O:1:\"D\":2:{s:7:\"\0D\0data\";s:1
 其实从以上各种来看，个人感觉如果要保存数据或者传递数据的话，序列化并不是最好的选择。毕竟包含了类型以及长度后将使得格式更为严格，而且反序列化回来的内容如果没有对应的类模板定义也并不是特别好用的，还不如直接使用 JSON 来得方便易读。当然，具体情况具体分析，我们还是要结合场景来选择合适的使用方式。
 
 测试代码：
+
 [https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/%E4%BD%BF%E7%94%A8Serializable%E6%8E%A5%E5%8F%A3%E6%9D%A5%E8%87%AA%E5%AE%9A%E4%B9%89PHP%E4%B8%AD%E7%B1%BB%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/%E4%BD%BF%E7%94%A8Serializable%E6%8E%A5%E5%8F%A3%E6%9D%A5%E8%87%AA%E5%AE%9A%E4%B9%89PHP%E4%B8%AD%E7%B1%BB%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/class.serializable.php](https://www.php.net/manual/zh/class.serializable.php)
 

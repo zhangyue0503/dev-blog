@@ -7,7 +7,7 @@ $arr = [
     "0.1" => "bb",
 ];
 
-var_dump($arr);
+// var_dump($arr);
 
 // array(3) {
 //     [1] =>
@@ -18,14 +18,24 @@ var_dump($arr);
 //     string(2) "bb"
 // }
 
+// $a  = [
+//     0=> 'a',
+//     2=> 'b',
+//     3=> 'c',
+//     '1' => 'd'
+// ];
+$a      = ['a']; // 1
+$a[2]   = 'b'; // 3
+$a[]    = 'c'; // 4
+$a['1'] = 'd'; // 2
 
-$a      = ['a'];
-$a[2]   = 'b';
-$a[]    = 'c';
-$a['1'] = 'd';
+var_dump($a);
+
 foreach ($a as $v) {
 	echo $v, ',';
 }
+echo PHP_EOL, '========', PHP_EOL;
 for ($i = 0; $i < count($a); ++$i) {
-	echo $a[$i], '  ,';
+	echo $a[$i], ',';
 }
+echo PHP_EOL;

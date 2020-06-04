@@ -97,6 +97,3 @@ var_dump(gc_status());
 [https://www.php.net/manual/zh/function.gc-enabled.php](https://www.php.net/manual/zh/function.gc-enabled.php)
 [https://www.php.net/manual/zh/function.gc-mem-caches.php](https://www.php.net/manual/zh/function.gc-mem-caches.php)
 [https://www.php.net/manual/zh/function.gc-status.php](https://www.php.net/manual/zh/function.gc-status.php)
-
-
-
