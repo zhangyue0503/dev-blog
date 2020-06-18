@@ -15,8 +15,6 @@ spl_autoload_register(function( $className ){
 $m = new TestClass();
 $m->show();
 
-
-
 ```
 
 是不是和__autoload()很像，当然作用也很像。我们直接运行这个文件试试，会发现TestClass.php也正常的加载了进来。那么为啥不直接用__autoload()函数，而使用sql_autoload_register()这么诡异的函数，而且还有个神奇的闭包参数！！！

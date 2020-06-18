@@ -52,7 +52,7 @@ while(!$fileObject->eof()){
 上面三种读取方式都有一个要注意的点是，我们将大文件读取后不应该再保存到变量中，应该直接打印显示、入库或者写到其他文件中。因为直接读取到一个变量中就和前面的直接读取到内存的方式一样了，那还不如直接去修改下 php.ini 的配置然后使用最上方的方式直接读取到内存方便。还是那句话，内存留给真正需要它的地方，这种大文件，最好还是进行硬盘的IO操作。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E5%A4%A7%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%93%8D%E4%BD%9C.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E5%A4%A7%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%93%8D%E4%BD%9C.php)
 
 参考文档：
 《PHP7编程实战》

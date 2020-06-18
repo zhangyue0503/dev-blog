@@ -21,7 +21,7 @@ echo base64_decode('YWFhOmFhYQ==');
 
 还是直接就从代码入手，上面的代码就是最简单的一种 HTTP 认证方式，如果 $_SERVER['PHP_AUTH_USER'] 不存在，那么我们就向浏览器发送一个 401 响应头，就是告诉浏览器我们需要登录验证。当浏览器收到这个响应头时，就会弹出一个浏览器自带的验证框并要求输入用户名和密码。
 
-当我们填写了用户名和密码后，浏览器会在请求头中带上 Authorization 字段，并且将 base64 之后的用户名和密码发送过来。同时，PHP将会分别把用户名和密码解析到 $_SERVER['PHP_AUTH_USER'] 和 $_SERVER['PHP_AUTH_PW'] 中。
+当我们填写了用户名和密码后，浏览器会在请求头中带上 Authorization 字段，并且将 base64 之后的用户名和密码发送过来。同时，PHP将会分别把用户名和密码解析到 \\$_SERVER['PHP_AUTH_USER'] 和 $_SERVER['PHP_AUTH_PW'] 中。
 
 上述这种认证方式就是最简单的 HTTP Basic 认证，可以看出，这种方式进行验证的用户名和密码其实是相当于明文传输的，因为 base64 很容易就可以反向解析出来。所以这种方式是非常不安全的。那么有没有更复杂一些的方式呢？
 
@@ -108,6 +108,7 @@ if($_GET['logout']){
 HTTP 验证的这种操作一般不会做为我们日常开发中的正常登录功能，大部分情况下，我们会给后台或者一些特殊的管理工具加上一层这种 HTTP 认证来实现双重的认证，也就是为了保障后台的数据安全。比如，我会在我的 phpMyAdmin 上增加一层这个认证。另外，HTTP 认证也可以直接在 Nginx 或 Apache 中直接配置，不需要走到 PHP 这一层来，这个我们将来学习 Nginx 的时候会再做说明。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E7%9A%84HTTP%E9%AA%8C%E8%AF%81.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E7%9A%84HTTP%E9%AA%8C%E8%AF%81.php)
 
 参考文档：
 [https://www.php.net/manual/zh/features.http-auth.php](https://www.php.net/manual/zh/features.http-auth.php)

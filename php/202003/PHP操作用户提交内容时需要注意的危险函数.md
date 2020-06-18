@@ -41,7 +41,7 @@ unlink('./' . $g);
 其实，只要能遵守这些建议，大部分的安全问题都能得到解决。还是那句话，不能相信用户的任何输出，在测试的时候请做好各种验证，包括但不限于边界值、特殊符号、特殊命令、越界值、目录权限等。在非必要的情况下不要使用用户的输入作为包含文件、执行脚本及文件操作的直接参数，如果一定要用的话千万要进行各种形式的过滤验证。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E6%93%8D%E4%BD%9C%E7%94%A8%E6%88%B7%E6%8F%90%E4%BA%A4%E5%86%85%E5%AE%B9%E6%97%B6%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%8D%B1%E9%99%A9%E5%87%BD%E6%95%B0.php]https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E6%93%8D%E4%BD%9C%E7%94%A8%E6%88%B7%E6%8F%90%E4%BA%A4%E5%86%85%E5%AE%B9%E6%97%B6%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%8D%B1%E9%99%A9%E5%87%BD%E6%95%B0.php()
 
 参考文档：
 [https://www.php.net/manual/zh/security.variables.php](https://www.php.net/manual/zh/security.variables.php)
