@@ -55,6 +55,7 @@ runkit_function_remove ('array_map');
 
 //runkit_method_add('PDO', 'testAddPdo', '', 'echo "This is PDO new Func!\n";');
 //PDO::testAddPdo();
+// PHP Warning:  runkit_method_add(): class PDO is not a user-defined class
 
 class Example{
 }

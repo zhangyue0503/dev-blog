@@ -64,6 +64,7 @@ echo 'Total ', $fileSize, PHP_EOL;
 感觉就和 ls -l 一样，可以方便的让我们能够进行目录下的相关操作。这个类的使用就简单的介绍到这里，关于SPL库中还有许多值得我们探索的能力，慢慢学习慢慢实践，不断提升我们面向优雅编程的能力。
 
 测试代码：
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E8%8E%B7%E5%8F%96%E7%9B%AE%E5%BD%95%E4%B8%AD%E7%9A%84%E5%85%A8%E9%83%A8%E5%86%85%E5%AE%B9RecursiveDirectoryIterator.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202003/source/PHP%E8%8E%B7%E5%8F%96%E7%9B%AE%E5%BD%95%E4%B8%AD%E7%9A%84%E5%85%A8%E9%83%A8%E5%86%85%E5%AE%B9RecursiveDirectoryIterator.php)
 
 参考文档：
 《PHP7编程实战》

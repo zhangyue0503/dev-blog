@@ -26,7 +26,7 @@ xdebug_debug_zval('a');
 // a: (refcount=2, is_ref=1)='I am a String'
 ```
 
-当我们进行普通赋值后，refcount 和 is_ref 没有任何变化，但当我们进行引用赋值后，可以看到 refcount 变成了2，is_ref 变成了1。这也就是说明当前的 $a 变量被引用赋值了，它的内存符号表服务于 $a 和 $b 两个变量。
+当我们进行普通赋值后，refcount 和 is_ref 没有任何变化，但当我们进行引用赋值后，可以看到 refcount 变成了2，is_ref 变成了1。这也就是说明当前的 \\$a 变量被引用赋值了，它的内存符号表服务于 $a 和 $b 两个变量。
 
 ```php
 $c = &$a;
@@ -163,7 +163,7 @@ xdebug_debug_zval('arrA');
 引用计数是了解垃圾回收机制的前提条件，而且正是因为现代语言中都有一套类似的垃圾回收机制才让我们的编程变得更加容易且安全。那么有人说了，日常开发根本用不到这些呀？用不到不代表不应该去学习，就像循环引用这个问题一样，当代码中充斥着大量的类似代码时，系统崩溃只是迟早的事情，所以，这些知识是我们向更高级的程序进阶所不可或缺的内容。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E7%9A%84%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E7%9A%84%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F.php)
 
 参考文档：
 [https://www.php.net/manual/zh/features.gc.refcounting-basics.php](https://www.php.net/manual/zh/features.gc.refcounting-basics.php)

@@ -1,5 +1,3 @@
-# 让PHP能够调用C的函数-FFI扩展
-
 在大型公司中，一般会有很我编程语言的配合。比如说让 Java 来做微服务层，用 C++ 来进行底层运算，用 PHP 来做中间层，最后使用 JS 展现效果。这些语言间的配合大部分都是通过 RPC 来完成，或者直接将数据入库再使用不同的语言来取用。那么，我们 PHP 的代码能否直接调用这些语言呢？其实，PHP 还真为我们准备了一个可以直接调用 C 语言的扩展库，并且这个扩展库还是已经默认内置在 PHP 中了，它就是 FFI 扩展。
 
 ## 什么是 FFI 
@@ -90,8 +88,8 @@ var_dump(FFI::sizeof($a)); // int(8192)，内存大小
 是不是感觉很高大上？但是请注意哦，FFI 调用的 C 函数并没有 PHP 本身去调用的效率高。比如这种 pow() 函数，使用 PHP 自身的效率更好。而且，FFI 扩展虽说已经是跟随 PHP 同步发布的扩展，但它还是处于实验性质的。也就是说，这个扩展是为未来可能用到的其它功能准备的，而且还有很多不确定性。所以在生产环境中如果需要合适类似的功能的话，那么还是要做更多的深入调研哦。
 
 测试代码：
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/%E8%AE%A9PHP%E8%83%BD%E5%A4%9F%E8%B0%83%E7%94%A8C%E7%9A%84%E5%87%BD%E6%95%B0-FFI%E6%89%A9%E5%B1%95.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/%E8%AE%A9PHP%E8%83%BD%E5%A4%9F%E8%B0%83%E7%94%A8C%E7%9A%84%E5%87%BD%E6%95%B0-FFI%E6%89%A9%E5%B1%95.php)
 
 参考文档：
-[https://www.php.net/manual/zh/intro.ffi.php][https://www.php.net/manual/zh/intro.ffi.php]
-[https://www.php.net/manual/zh/ffi.examples-basic.php][https://www.php.net/manual/zh/ffi.examples-basic.php]
+[https://www.php.net/manual/zh/intro.ffi.php](https://www.php.net/manual/zh/intro.ffi.php)
+[https://www.php.net/manual/zh/ffi.examples-basic.php](https://www.php.net/manual/zh/ffi.examples-basic.php)

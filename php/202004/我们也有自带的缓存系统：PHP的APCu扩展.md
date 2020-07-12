@@ -50,7 +50,7 @@ var_dump(apcu_fetch("obj"));
 
 正常的使用都是比较简单的，我们添加各种类型的数据都可以正常存入缓存。不过需要注意的是，我们可以直接保存对象进入 APCu 缓存中，不需要将它序列化或者JSON成字符串，系统会自动帮我们序列化。
 
-apcu_add(string $key , mixed $var [, int $ttl = 0 ]) 方法就是普通的添加一个缓存，$ttl 可以设置过期时间，也是以秒为单位，如果不设置就是长期有效的。注意，APCu 的缓存时限在一次 CLI 中有效，再调用一次 CLI 取不到上次 CLI 中设置的缓存内容。而在 PHP-FPM 中，重启 PHP-FPM 或 FastCGI 之后缓存会失效。
+apcu_add(string \\$key , mixed $var [, int $ttl = 0 ]) 方法就是普通的添加一个缓存，$ttl 可以设置过期时间，也是以秒为单位，如果不设置就是长期有效的。注意，APCu 的缓存时限在一次 CLI 中有效，再调用一次 CLI 取不到上次 CLI 中设置的缓存内容。而在 PHP-FPM 中，重启 PHP-FPM 或 FastCGI 之后缓存会失效。
 
 接下来我们重点测试一下几个不太常见的方法。
 
@@ -85,6 +85,8 @@ var_dump(apcu_cache_info());
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/%E6%88%91%E4%BB%AC%E4%B9%9F%E6%9C%89%E8%87%AA%E5%B8%A6%E7%9A%84%E7%BC%93%E5%AD%98%E7%B3%BB%E7%BB%9F%EF%BC%9APHP%E7%9A%84APCu%E6%89%A9%E5%B1%95.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/%E6%88%91%E4%BB%AC%E4%B9%9F%E6%9C%89%E8%87%AA%E5%B8%A6%E7%9A%84%E7%BC%93%E5%AD%98%E7%B3%BB%E7%BB%9F%EF%BC%9APHP%E7%9A%84APCu%E6%89%A9%E5%B1%95.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/function.apcu-entry.php](https://www.php.net/manual/zh/function.apcu-entry.php)
