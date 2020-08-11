@@ -10,7 +10,7 @@ CLI 则是 Command Line Interface，即命令行接口。主要用作 PHP 的开
 
 另外，我们在命令行也可以直接使用 phpcgi 来运行一段 PHP 代码或者某个 PHP 文件，它和直接使用 php 命令来运行有什么区别呢？
 
-- CLI 其输出没有任何头信息
+- CLI 的输出没有任何头信息
 - CLI 在运行时，不会把工作目录改为脚本的当前目录
 - CLI 出错时输出纯文本的错误信息（非 HTML 格式）
 - 强制覆盖了 php.ini 中的某些设置，因为这些设置在外壳环境下是没有意义的
@@ -26,7 +26,7 @@ echo getcwd();
 // ...../MyDoc/博客文章
 ```
 
-我们选取最典型的一个例子，我们运行的这个文件中，使用 getcwd() 全输出当前脚本运行的目录，可以看出两种运行方式输出的结果明显不同。php-cgi 是以文件所在目录为基准输出，而 php 则是以当前运行这个命令的目录为基准输出。
+我们选取最典型的一个例子，我们运行的这个文件中，使用 getcwd() 输出当前脚本运行的目录，可以看出两种运行方式输出的结果明显不同。php-cgi 是以文件所在目录为基准输出，而 php 则是以当前运行这个命令的目录为基准输出。
 
 ## 直接运行 PHP 代码
 
@@ -60,7 +60,7 @@ print_r($argv);
 // )
 ```
 
-在测试文件中，我们打印了 $argv 变量。PHP 脚本运行的时候，会将命令行的所有参数保存在 $argv 变量中，并且还有一个 $argc 变量会保存参数的个数。
+在测试文件中，我们打印了 \\$argv 变量。PHP 脚本运行的时候，会将命令行的所有参数保存在 $argv 变量中，并且还有一个 $argc 变量会保存参数的个数。
 
 我们依然是使用 php-cgi 和 php ，两种模式来测试，从这里我们能发现 php-cgi 模式中 $argv 打印的内容竟然是头信息，而不是具体的参数信息。这也没错，毕竟 CGI 模式本来就是为 Web 服务器提供的接口，所以它接收的是 post 、 get 这类的参数而不是命令行的参数。
 
@@ -143,10 +143,12 @@ CLI 模式下我们正常获得了参数内容，并且 $argv[0] 始终保存的
 
 其实命令行模式运行的时候还有很多的选项，这里我们只是选取了一部分非常有用的内容进行展示。当然，大部分框架都提供了用于命令行的脚本框架，比如 laravel 中可以通过 php artisan make:command 来创建命令行脚本，然后使用 php artisan 来运行框架中的脚本。这些内容将来我们在学习框架方面知识的内容将会进行详细的讲解。
 
-命令行模式的应用非常广泛，几乎任何项目中都会使用到，所以，深入的学习掌握它将会使我们大受裨益。
+命令行 CLI 模式的应用非常广泛，几乎任何项目中都会使用到，所以，深入的学习掌握它将会使我们大受裨益。
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E7%9A%84CLI%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%BC%8F%E6%B5%85%E6%9E%90.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E7%9A%84CLI%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%BC%8F%E6%B5%85%E6%9E%90.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/features.commandline.php](https://www.php.net/manual/zh/features.commandline.php)

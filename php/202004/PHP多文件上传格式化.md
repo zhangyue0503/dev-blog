@@ -257,7 +257,7 @@ $_FILE['myfile']['error']['a']['b'][0];
 $_FILE['myfile']['error']['a']['b'][0];
 ```
 
-单个表单是一个 singlefile 为键名的数组，里面是对应的 name 、 type 等属性。这个非常简单也清晰明了，但是数组形式上传的内容就比较坑了，每一个属性下面都有多个值，而且这些值还有可能是嵌套的数组。就比如说我们要获得 myfile[a][b][] 的上传文件内容，我们就要通过 $_FILE['myfile']['name']['a']['b'][0] 、 $_FILE['myfile']['type']['a']['b'][0] 这样的形式获得相关的内容。这个可真的不是很友好，那么我们今天的主题就来了，我们把这种内容进行一下格式化，让他变成和 singlefile 类似的结构，也就是一个文件的相关内容都在一个键名结构下，比如 myfile[a][b][] 的内容就全部都在 $_FILE['myfile'][a][b][0]下面。
+单个表单是一个 singlefile 为键名的数组，里面是对应的 name 、 type 等属性。这个非常简单也清晰明了，但是数组形式上传的内容就比较坑了，每一个属性下面都有多个值，而且这些值还有可能是嵌套的数组。就比如说我们要获得 myfile[a][b][] 的上传文件内容，我们就要通过 \\$_FILE['myfile']['name']['a']['b'][0] 、 $_FILE['myfile']['type']['a']['b'][0] 这样的形式获得相关的内容。这个可真的不是很友好，那么我们今天的主题就来了，我们把这种内容进行一下格式化，让他变成和 singlefile 类似的结构，也就是一个文件的相关内容都在一个键名结构下，比如 myfile[a][b][] 的内容就全部都在 $_FILE['myfile'][a][b][0]下面。
 
 ```php
 $files = [];
@@ -439,5 +439,8 @@ $files['myfile']['a']['b'][0]['size'];
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%A0%BC%E5%BC%8F%E5%8C%96.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%A0%BC%E5%BC%8F%E5%8C%96.php)
+
 参考文档：
+
 [https://www.php.net/manual/zh/features.file-upload.php](https://www.php.net/manual/zh/features.file-upload.php)

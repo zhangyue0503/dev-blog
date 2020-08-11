@@ -14,7 +14,7 @@ ini_set('memory_limit', -1);
 echo ini_get('memory_limit'), PHP_EOL; // -1，可以修改，PHP_INI_ALL
 ```
 
-请注意看注释，第一条注释中写了 ，PHP_INI_SYSTEM ，并且这个参数无法修改。没错，相信聪明的你已经看出来了，这些参数是有对应的类型的。，PHP_INI_SYSTEM 的意思就是只能在 php.ini 或者 httpd.conf 中进行修改，无法在语言动态运行时修改。
+请注意看注释，第一条注释中写了 ，PHP_INI_SYSTEM ，并且这个参数无法修改。没错，相信聪明的你已经看出来了，这些参数是有对应的类型的。PHP_INI_SYSTEM 的意思就是只能在 php.ini 或者 httpd.conf 中进行修改，无法在语言动态运行时修改。
 
 不同的 php.ini 配置参数对应有四种类型：
 
@@ -187,20 +187,30 @@ echo $v;
 
 ## 总结
 
-不看不知道，一看吓一跳。原来只是使用过 ini_set() 去修改运行时内存大小，但直到今天才知道原来 ini_set() 并不是所有的配置都可以修改的，每个参数是否能动态修改还要看它的参数类型。而且上面还忘了说了，我们并不能使用 ini_set() 去增加配置参数。也就是说，使用 ini_set("B", "TEST_B") 这样一个 B 参数，然后直接使用 ini_get() 也是无法获取的。而且简单的获取参数信息的两个函数也有这么多的不同，phpinfo() 原来也有这么多参数。果然，文档才是最好的学习资料。旅程还没有停止，我们刷文档的脚步依然不能停，一起加油冲冲冲！！
+不看不知道，一看吓一跳。原来只是使用过 ini_set() 去修改运行时内存大小，但直到今天才知道原来 ini_set() 并不是所有的配置都可以修改的，每个参数是否能动态修改还要看它的参数类型。而且上面还忘了说了，我们并不能使用 ini_set() 去增加配置参数。也就是说，使用 ini_set("B", "TEST_B") 增加一个 B 参数，然后直接使用 ini_get() 也是无法获取的。而且简单的获取参数信息的两个函数也有这么多的不同，phpinfo() 原来也有这么多参数。果然，文档才是最好的学习资料。旅程还没有停止，我们刷文档的脚步依然不能停，一起加油冲冲冲！！
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E5%85%B3%E4%BA%8Ephp%E7%9A%84ini%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0%E6%B5%85%E6%9E%90.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E5%85%B3%E4%BA%8Ephp%E7%9A%84ini%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0%E6%B5%85%E6%9E%90.php)
 
 参考文档：
 
 [https://www.php.net/manual/zh/function.get-cfg-var.php](https://www.php.net/manual/zh/function.get-cfg-var.php)
+
 [https://www.php.net/manual/zh/function.ini-set.php](https://www.php.net/manual/zh/function.ini-set.php)
+
 [https://www.php.net/manual/zh/function.ini-restore.php](https://www.php.net/manual/zh/function.ini-restore.php)
+
 [https://www.php.net/manual/zh/function.ini-get.php](https://www.php.net/manual/zh/function.ini-get.php)
+
 [https://www.php.net/manual/zh/function.ini-get-all.php](https://www.php.net/manual/zh/function.ini-get-all.php)
+
 [https://www.php.net/manual/zh/function.ini-alter.php](https://www.php.net/manual/zh/function.ini-alter.php)
+
 [https://www.php.net/manual/zh/function.php-ini-loaded-file.php](https://www.php.net/manual/zh/function.php-ini-loaded-file.php)
+
 [https://www.php.net/manual/zh/function.php-ini-scanned-files.php](https://www.php.net/manual/zh/function.php-ini-scanned-files.php)
+
 [https://www.php.net/manual/zh/ini.list.php](https://www.php.net/manual/zh/ini.list.php)
+
 [https://www.php.net/manual/zh/configuration.changes.modes.php](https://www.php.net/manual/zh/configuration.changes.modes.php)

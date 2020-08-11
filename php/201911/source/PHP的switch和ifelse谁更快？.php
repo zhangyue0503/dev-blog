@@ -1,19 +1,19 @@
 <?php
 
-$string = "2string";
+// $string = "2string";
 
-switch ($string) {
-    case 1:
-        echo "this is 1";
-        break;
-    case 2:
-        echo "this is 2";
-        break;
-    case '2string':
-        echo "this is a string";
-        break;
-}
-exit;
+// switch ($string) {
+//     case 1:
+//         echo "this is 1";
+//         break;
+//     case 2:
+//         echo "this is 2";
+//         break;
+//     case '2string':
+//         echo "this is a string";
+//         break;
+// }
+// exit;
 
 $s = time();
 for ($i = 0; $i < 1000000000; ++$i) {

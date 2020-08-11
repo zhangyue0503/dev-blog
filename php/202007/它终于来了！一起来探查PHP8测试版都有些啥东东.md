@@ -30,7 +30,7 @@
 
 - 删除了从方法创建的闭包中取消 $this 绑定 (unbind) 的功能，使用 Closure::fromCallable() 或者 ReflectionMethod::getClosure()
 
-- 删除了从包含 $this 用法的闭包函数中解绑 $this 的能力
+- 删除了从包含 \\$this 用法的闭包函数中解绑 $this 的能力
 
 - 删除了使用 array_key_exists() 来获取对象的属性键是否存在的能力，使用 isset() 或者 property_exists() 来替代
 
@@ -82,7 +82,7 @@ function test(int $arg = null) {}
 - 许多警告转换成了异常：
     * 给非对象写入属性
     * 将元素追加到 PHP_INT_MAX 键的数组中
-    * 将无效类型（数组或䭴）用作数组键或字符串偏移量
+    * 将无效类型（数组或类）用作数组键或字符串偏移量
     * 写入标量值的数组索引
     * 解压缩不可遍历的数组
 
@@ -204,7 +204,7 @@ class MyClass {
 
 - Reflection 的 export() 方法被移除
 
-- Reflection 的 __toString() 方法将返回该类型的完事调试表示形式，不再被弃用。这个功能可能在 PHP 版本之间会发生变化
+- Reflection 的 __toString() 方法将返回该类型的完整调试表示形式，不再被弃用。这个功能可能在 PHP 版本之间会发生变化
 
 - Reflection 的 isConstructor() 和 isDestructor() 也可以应用于接口了，之前只适用于类或 trait
 
@@ -270,11 +270,11 @@ http://example.com/foo?# => query = "",   fragment = ""
 
 - new 和 instanceof 可以与任意表达式一起使用，使用 "new（expression）(…$args)" 和 "$obj instanceof (expression)"
 
-- 修复了一些变量就去，如：Foo::BAR::$baz
+- 修复了一些变量语法，如：Foo::BAR::$baz
 
 - 添加了 Stringable 接口，如果类定义了一个 __toString() 方法，则会自动实现该接口
 
-- traits 可以定义抽象的私有方法
+- trait 可以定义抽象的私有方法
 
 - "throw" 可以用于表达式
 

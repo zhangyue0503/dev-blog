@@ -105,5 +105,8 @@ PDO 方式连接时，需要给一个 PDO::ATTR_PERSISTENT 参数并设置为 tr
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%8C%81%E4%B9%85%E5%8C%96.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202004/source/PHP%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%8C%81%E4%B9%85%E5%8C%96.php)
+
 参考文档：
+
 [https://www.php.net/manual/zh/features.persistent-connections.php](https://www.php.net/manual/zh/features.persistent-connections.php)

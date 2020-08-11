@@ -27,7 +27,7 @@ ob_end_clean();
 echo $v;
 ```
 
-上面说过，使用了 ob_end_clean() 就会清除输出缓冲区里面的内容，但是在这段代码中，我们使用 ob_get_contents() 函数直接将缓冲区的内容赋值给了变量 $v 。这时候，$v 中就有了前面两段 echo 中的内容，也就是说，这个一套操作我们就拿到了本身应该输出的内容，并将它保存在了变量中。这样做有什么用呢？我们可以获得类似于 phpinfo() 、 var_dump() 这些直接输出函数的内容了，并且不会打印在客户端屏幕上。比如：
+上面说过，使用了 ob_end_clean() 就会清除输出缓冲区里面的内容，但是在这段代码中，我们使用 ob_get_contents() 函数直接将缓冲区的内容赋值给了变量 \\$v 。这时候，$v 中就有了前面两段 echo 中的内容，也就是说，这个一套操作我们就拿到了本身应该输出的内容，并将它保存在了变量中。这样做有什么用呢？我们可以获得类似于 phpinfo() 、 var_dump() 这些直接输出函数的内容了，并且不会打印在客户端屏幕上。比如：
 
 ```php
 ob_start();
@@ -153,11 +153,11 @@ echo '<form action="script.php" method="post">
 
 上面的代码看出什么端倪了嘛？没错，使用 output_add_rewrite_var() 函数，我们可以在 PHP 输出的时候为 HTML 的链接或者表单代码增加一个参数。有没有想到什么使用场景？POST 表单的 CSRF 攻击的防范。
 
-这个函数会根据 php.ini 文件中的 url_rewriter.tags 配置项来进行添加，在默认情况下这个配置项只支持 from 表单，同时，它还可以支持 a标签的href 、 area标签的href 、 frame标签的src 、 input标签的src 等等。也就是说，会在这些标签相对应的属性中自动添加字段。当然，它也有一个反函数 output_reset_rewrite_vars() 用于取消之前增加的这个参数。
+这个函数会根据 php.ini 文件中的 url_rewriter.tags 配置项来进行添加，在默认情况下这个配置项只支持 from 表单，同时，它还可以支持 a 标签的href 、 area标签的href 、 frame标签的src 、 input标签的src 等等。也就是说，会在这些标签相对应的属性中自动添加字段。当然，它也有一个反函数 output_reset_rewrite_vars() 用于取消之前增加的这个参数。
 
 ## 总结
 
-关于输出缓冲控制这块还有很多好玩的东西，不过限于篇幅我们先介绍到这里，将来踫到什么好的功能的应用我们再单独讲解。现在基于 Swoole 的应用越来越多，当我们需要将 TP 、 Laravel 这类传统框架转换成支持 Swoole 的时候，往往就需要在入口文件使用输出缓冲控制来进行修改。因为传统框架基本都是直接进行 echo 之类的输出的，而在 Swoole 中，echo 这类的内容是直接打印在控制台的，这就需要我们通过 ob_get_contents() 能力获得全部的输出再通过 response.end() 来进行实际的响应。另外，还有一些其他的场景也会用到输出缓冲控制：
+关于输出缓冲控制这块还有很多好玩的东西，不过限于篇幅我们先介绍到这里，将来踫到什么好的功能的应用我们再单独讲解。现在基于 Swoole 的应用越来越多，当我们需要将 TP 、 Laravel 这类传统框架转换成支持 Swoole 的时候，往往就需要在入口文件使用输出缓冲控制来进行修改。因为传统框架基本都是直接进行 echo 之类的输出的，而在 Swoole 中，echo 这类的内容是直接打印在控制台的，这就需要我们通过 ob_get_contents() 能力获得全部的输出再通过 response->end() 来进行实际的响应。另外，还有一些其他的场景也会用到输出缓冲控制：
 
 - 1.在PHP中，像header(), session_start(), setcookie() 等这样的发送头文件的函数前，不能有任何的输出，而利用输出缓冲控制函数可以在这些函数前进行输出而不报错
 - 2.对输出的内容进行处理，例如生成静态缓存文件、进行gzip压缩输出，这算是较常用的功能了
@@ -186,7 +186,7 @@ echo '<form action="script.php" method="post">
 
 测试代码：
 
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E8%BF%98%E6%90%9E%E4%B8%8D%E6%87%82PHP%E4%B8%AD%E7%9A%84%E8%BE%93%E5%87%BA%E7%BC%93%E5%86%B2%E6%8E%A7%E5%88%B6%EF%BC%9F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E8%BF%98%E6%90%9E%E4%B8%8D%E6%87%82PHP%E4%B8%AD%E7%9A%84%E8%BE%93%E5%87%BA%E7%BC%93%E5%86%B2%E6%8E%A7%E5%88%B6%EF%BC%9F.php)
 
 参考文档：
 

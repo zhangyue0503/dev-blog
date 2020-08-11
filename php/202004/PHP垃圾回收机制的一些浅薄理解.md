@@ -43,11 +43,12 @@
 
 垃圾回收的内容其实我们只需要记住几个关键点就可以了，具体的核心算法和内容是需要在更深入的研究源码后才能完全了解的，当然，这也是我们学习的目标，之后也一定会涉猎源码底层的相关内容，就让我们拭目以待吧！
 
-测试代码：
-
-
 参考文档：
+
 [https://www.php.net/manual/zh/features.gc.collecting-cycles.php](https://www.php.net/manual/zh/features.gc.collecting-cycles.php)
+
 [https://www.php.net/manual/zh/features.gc.performance-considerations.php](https://www.php.net/manual/zh/features.gc.performance-considerations.php)
+
 [https://www.cnblogs.com/lishanlei/p/9852274.html](https://www.cnblogs.com/lishanlei/p/9852274.html)
+
 [https://www.cnblogs.com/lovehappying/p/3679356.html](https://www.cnblogs.com/lovehappying/p/3679356.html)
