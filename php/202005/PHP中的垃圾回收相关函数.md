@@ -36,9 +36,9 @@ gc_collect_cycles();
 echo memory_get_usage(), PHP_EOL; // 706488
 ```
 
-在这段代码中，我们对 $d 进行了一个简单的循环引用赋值。使用 unset() 后，内存没有发生变化，这时，只能使用 gc_collect_cycles() 函数来进行强制的循环引用清理，才能将 $d 里面的无效循环引用清除掉。
+在这段代码中，我们对 \\$d 进行了一个简单的循环引用赋值。使用 unset() 后，内存没有发生变化，这时，只能使用 gc_collect_cycles() 函数来进行强制的循环引用清理，才能将 $d 里面的无效循环引用清除掉。
 
-没错，这一段的重点正是 gc_collect_cycles() 这个函数。它在正常情况下对普通的变量引用是不会产生什么清理效果的，当然，对于普通的变量我们直接 unset() 掉就可以了。它最主要的作用就是针对循环引用的清理。之前我们学习过，循环引用计数会存在一个 根缓冲区 ，一般默认情况下它能容纳 10000 个待清理的 可能根 。而 gc_collect_cycles() 的作用就是不用等这个 根缓冲区 满就直接进行清理（个人理解）。关于这个垃圾回收算法的内容请移步：[PHP垃圾回收机制的一些浅薄理解]()
+没错，这一段的重点正是 gc_collect_cycles() 这个函数。它在正常情况下对普通的变量引用是不会产生什么清理效果的，当然，对于普通的变量我们直接 unset() 掉就可以了。它最主要的作用就是针对循环引用的清理。之前我们学习过，循环引用计数会存在一个 根缓冲区 ，一般默认情况下它能容纳 10000 个待清理的 可能根 。而 gc_collect_cycles() 的作用就是不用等这个 根缓冲区 满就直接进行清理（个人理解）。关于这个垃圾回收算法的内容请移步：[PHP垃圾回收机制的一些浅薄理解](https://mp.weixin.qq.com/s/69Zp_nCiqfxkT7R_L1LMVQ)
 
 其实，大部分情况下我们是不太需要关注 PHP 的垃圾回收问题的，也就是说，我们不是很需要手动地去调用这个 gc_collect_cycles() 函数。PHP-FPM 在每次调用完成后会直接整体的释放，简单的一次 CLI 脚本执行完也会全部释放。没错，正常情况下，PHP 一次执行完成之后就会销毁所有的内容，内存垃圾自然也就不存在了。但是，在执行长时间的守护脚本时，或者使用常驻进程的框架（Swoole）时，还是需要注意有没有循环引用的问题。因为这种程序一直运行，如果存在大量循环引用对象时，就有可能导致内存泄露。
 
@@ -87,13 +87,22 @@ var_dump(gc_status());
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/PHP%E4%B8%AD%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/PHP%E4%B8%AD%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0.php)
 
 参考文档：
-[PHP的引用计数是什么意思？]()
-[PHP垃圾回收机制的一些浅薄理解]()
+
+[PHP的引用计数是什么意思？](https://mp.weixin.qq.com/s/WeZL4EzptDPQnkrFXxisgQ)
+
+[PHP垃圾回收机制的一些浅薄理解](https://mp.weixin.qq.com/s/69Zp_nCiqfxkT7R_L1LMVQ)
+
 [https://www.php.net/manual/zh/function.gc-collect-cycles.php](https://www.php.net/manual/zh/function.gc-collect-cycles.php)
+
 [https://www.php.net/manual/zh/function.gc-disable.php](https://www.php.net/manual/zh/function.gc-disable.php)
+
 [https://www.php.net/manual/zh/function.gc-enable.php](https://www.php.net/manual/zh/function.gc-enable.php)
+
 [https://www.php.net/manual/zh/function.gc-enabled.php](https://www.php.net/manual/zh/function.gc-enabled.php)
+
 [https://www.php.net/manual/zh/function.gc-mem-caches.php](https://www.php.net/manual/zh/function.gc-mem-caches.php)
+
 [https://www.php.net/manual/zh/function.gc-status.php](https://www.php.net/manual/zh/function.gc-status.php)

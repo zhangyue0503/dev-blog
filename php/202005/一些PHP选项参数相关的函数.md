@@ -1,6 +1,6 @@
-# 一些PHP选项参数相关的函数（一）
+# 一些PHP选项参数相关的函数
 
-关于 PHP 的配置，我们大多数情况下都是去查看 php.ini 文件或者通过命令行来查询某些信息，其实，PHP 的一些内置函数也可以帮助我们去查看或操作这些配置参数。比如之前我们学习过的 [关于php的ini文件相关操作函数浅析]() 。修改方面的函数就只有 ini_set() ，其他大部分的函数其实都是帮助我们进行查询的，今天，我们就来一一讲解这些函数。
+关于 PHP 的配置，我们大多数情况下都是去查看 php.ini 文件或者通过命令行来查询某些信息，其实，PHP 的一些内置函数也可以帮助我们去查看或操作这些配置参数。比如之前我们学习过的 [关于php的ini文件相关操作函数浅析](https://mp.weixin.qq.com/s/htAk7a3GlmS956fxMVxZdQ) 。修改方面的函数就只有 ini_set() ，其他大部分的函数其实都是帮助我们进行查询的，今天，我们就来一一讲解这些函数。
 
 ## get_defined_constants()
 
@@ -126,8 +126,4 @@ var_dump(get_resources());
 
 测试代码：
 
-
-参考文档：
-
-
-
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E4%B8%80%E4%BA%9BPHP%E9%80%89%E9%A1%B9%E5%8F%82%E6%95%B0%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E4%B8%80%E4%BA%9BPHP%E9%80%89%E9%A1%B9%E5%8F%82%E6%95%B0%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0.php)

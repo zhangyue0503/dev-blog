@@ -1,5 +1,3 @@
-# 动态查看及加载PHP扩展
-
 在编译并完成 php.ini 的配置之后，我们就成功的安装了一个 PHP 的扩展。不过， PHP 也为我们提供了两个在动态运行期间可以查看扩展状态以及加载未在 php.ini 中进行配置的扩展的函数。下面，我们就来看看它们的使用。
 
 ## 查看是否已经加载了扩展
@@ -31,6 +29,8 @@ echo extension_loaded("redis");
 综上所述，在生产环境中，我们还是尽量不要使用动态加载扩展的能力。这个可以当成我们的一个学习资料，在自己本机电脑上不想一次加载太多扩展的情况下使用，当需要测试某些功能而需要某些特殊的扩展时，再考虑使用这个功能进行本地的测试。
 
 测试代码：
+
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E5%8A%A8%E6%80%81%E6%9F%A5%E7%9C%8B%E5%8F%8A%E5%8A%A0%E8%BD%BDPHP%E6%89%A9%E5%B1%95.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/%E5%8A%A8%E6%80%81%E6%9F%A5%E7%9C%8B%E5%8F%8A%E5%8A%A0%E8%BD%BDPHP%E6%89%A9%E5%B1%95.php)
 
 参考文档：
 

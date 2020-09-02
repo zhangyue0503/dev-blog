@@ -115,17 +115,30 @@ getlastmod() 非常简单，就是返回当前运行的这个 PHP 文件最后�
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E5%85%B3%E4%BA%8E%E5%BD%93%E5%89%8DPHP%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E5%85%B3%E4%BA%8E%E5%BD%93%E5%89%8DPHP%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/function.get-current-user.php](https://www.php.net/manual/zh/function.get-current-user.php)
+
 [https://www.php.net/manual/zh/function.getmyuid.php](https://www.php.net/manual/zh/function.getmyuid.php)
+
 [https://www.php.net/manual/zh/function.getmygid.php](https://www.php.net/manual/zh/function.getmygid.php)
+
 [https://www.php.net/manual/zh/function.getmyinode.php](https://www.php.net/manual/zh/function.getmyinode.php)
+
 [https://www.php.net/manual/zh/function.getmypid.php](https://www.php.net/manual/zh/function.getmypid.php)
+
 [https://www.php.net/manual/zh/function.getrusage.php](https://www.php.net/manual/zh/function.getrusage.php)
+
 [https://www.php.net/manual/zh/function.php-sapi-name.php](https://www.php.net/manual/zh/function.php-sapi-name.php)
+
 [https://www.php.net/manual/zh/function.php-uname.php](https://www.php.net/manual/zh/function.php-uname.php)
+
 [https://www.php.net/manual/zh/function.phpversion.php](https://www.php.net/manual/zh/function.phpversion.php)
+
 [https://www.php.net/manual/zh/function.set-time-limit.php](https://www.php.net/manual/zh/function.set-time-limit.php)
+
 [https://www.php.net/manual/zh/function.zend-version.php](https://www.php.net/manual/zh/function.zend-version.php)
+
 [https://www.php.net/manual/zh/function.getlastmod.php](https://www.php.net/manual/zh/function.getlastmod.php)

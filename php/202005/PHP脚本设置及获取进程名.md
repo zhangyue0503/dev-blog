@@ -49,7 +49,10 @@ echo "Process title: " . cli_get_process_title() . "\n";
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/PHP%E8%84%9A%E6%9C%AC%E8%AE%BE%E7%BD%AE%E5%8F%8A%E8%8E%B7%E5%8F%96%E8%BF%9B%E7%A8%8B%E5%90%8D.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202005/source/PHP%E8%84%9A%E6%9C%AC%E8%AE%BE%E7%BD%AE%E5%8F%8A%E8%8E%B7%E5%8F%96%E8%BF%9B%E7%A8%8B%E5%90%8D.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/function.cli-set-process-title.php](https://www.php.net/manual/zh/function.cli-set-process-title.php)
+
 [https://www.php.net/manual/zh/function.cli-get-process-title.php](https://www.php.net/manual/zh/function.cli-get-process-title.php)

@@ -1,6 +1,6 @@
 # 如何获取PHP命令行参数
 
-使用 PHP 开发的同学多少都会接触过 CLI 命令行。经常会有一些定时任务或者一些脚本直接使用命令行处理会更加的方便，有些时候我们是需要像网页的 GET 、 POST 一样为这些命令行脚本提供参数。比如在针对某些日期做统计的脚本，就需要传递一个日期给它，这样我们就统计指定日期的一些数据。这类需求应该非常常见，那么，我们都是如何来接收这些命令行的参数的呢？今天，就来介绍一下这方面的内容。
+使用 PHP 开发的同学多少都会接触过 CLI 命令行。经常会有一些定时任务或者一些脚本直接使用命令行处理会更加的方便，有些时候我们会需要像网页的 GET 、 POST 一样为这些命令行脚本提供参数。比如在针对某些日期做统计的脚本，就需要传递一个日期给它，这样我们就统计指定日期的一些数据。这类需求应该非常常见，那么，我们都是如何来接收这些命令行的参数的呢？今天，就来介绍一下这方面的内容。
 
 ## $argv 获得所有空格分隔的参数列表
 
@@ -134,7 +134,7 @@ print_r(getopt('f:'));
 // )
 ```
 
-这一段比较长，我们一块一块来看。首先是不带冒号的 abcdef 写法，返回的数组中都包含键，但没有值，对应上面的规则就是不接受这些参数选项的值，你传了这些参数选项也是只有一键而内容是空的。
+这一段比较长，我们一块一块来看。首先是不带冒号的 abcdef 写法，返回的数组中都包含键，但没有值，对应上面的规则就是不接受这些参数选项的值，你传了这些参数选项也是只有键名而内容是空的。
 
 第二段是定义了一个参数，但是不给值，这时，双冒号 :: 会有键名，而单冒号 : 则什么都没有。
 
@@ -173,7 +173,10 @@ echo $argv[$optind], PHP_EOL; // 等同于 $argv 的索引顺序，aa
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96PHP%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96PHP%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0.php)
+
 
 参考文档：
+
 [https://www.php.net/manual/zh/reserved.variables.argv.php](https://www.php.net/manual/zh/reserved.variables.argv.php)
 [https://www.php.net/manual/zh/function.getopt.php](https://www.php.net/manual/zh/function.getopt.php)
