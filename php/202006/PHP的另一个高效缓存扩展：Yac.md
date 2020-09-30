@@ -4,7 +4,7 @@
 
 ## 什么是 Yac
 
-从名字其实就能看出，这又是鸟哥大神的作品。作为我们中国程序员的骄傲，在 PHP 界有举足轻重的地位。毕竟是 PHP 的核心开发人员，他的作品每次都不会让我们失望。
+从名字其实就能看出，这又是鸟哥大神的作品。毕竟是 PHP 的核心开发人员，他的作品每次都不会让我们失望。鸟哥可以说是我们中国程序员的骄傲，他在 PHP 界有举足轻重的地位，大家可以自己搜索一下他的博客，虽说更新频率不高，但每篇文章都值得我们学习。
 
 Yac 是一个无锁共享缓存系统，因为无锁，所以它的效率非常高。据说 Apc 的效率是 Memcached 的一倍以上，而 Yac 比 Apc 更快。这就是它最大的特点。
 
@@ -155,7 +155,7 @@ echo $yac->ttl2, PHP_EOL; // 20s
 sleep(10);
 
 echo $yac->get('ttl'), PHP_EOL; // 
-echo $yac->ttl2, PHP_EOL; // 2
+echo $yac->ttl2, PHP_EOL; // 20s
 ```
 
 上述代码中的 ttl 缓存只设置了 10 秒的过期时间，所以在 sleep() 10 秒后，输出 ttl 就没有任何内容了。
@@ -168,10 +168,12 @@ echo $yac->ttl2, PHP_EOL; // 2
 
 测试代码：
 
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E9%AB%98%E6%95%88%E7%BC%93%E5%AD%98%E6%89%A9%E5%B1%95%EF%BC%9AYac.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E9%AB%98%E6%95%88%E7%BC%93%E5%AD%98%E6%89%A9%E5%B1%95%EF%BC%9AYac.php)
 
 参考文档：
 
 [https://www.php.net/manual/zh/book.yac.php](https://www.php.net/manual/zh/book.yac.php)
+
 [https://www.laruence.com/2013/03/18/2846.html](https://www.laruence.com/2013/03/18/2846.html)
+
 [https://www.cnblogs.com/sunsky303/p/6554888.html](https://www.cnblogs.com/sunsky303/p/6554888.html)

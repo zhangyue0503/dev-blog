@@ -43,6 +43,8 @@ opcache.enable=1
 ps -ef | grep "php-fpm: master" | grep -v grep | cut -c 9-15 | xargs kill -USR2
 ```
 
+> 感谢知乎大佬的指正，重启 PHP-FPM 不是最佳方案，应该使用 opcache_reset() 手动重启，或者通过 php.ini 文件的配置 opcache.validate_timestamps + opcache.revalidate_freq 自动间隔编译，或者通过 opcache_compile_file() 来直接重新编译修改过的文件
+
 ## ab 测试效果
 
 我们进行测试的内容是测试环境的一台2核4G的服务器，使用的 PHP 版本是 PHP7.4 ，正常的 Nginx 及 PHP 配置， ulimit 也都开到了最大。代码只是简单的输出了一行文字，不过我们使用的是一个简单的 mvc 框架 ，也就是说这段代码运行起来至少也会加载几个文件，而不是简简单单的一个文件。

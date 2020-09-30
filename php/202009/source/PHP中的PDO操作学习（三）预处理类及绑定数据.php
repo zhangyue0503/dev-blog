@@ -5,6 +5,13 @@ $pdo = new PDO($dns, 'root', '', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
 $stmt = $pdo->prepare("select * from zyblog_test_user");
 
+// PDOStatement 对象的内容
+var_dump($stmt);
+// object(PDOStatement)#2 (1) {
+//     ["queryString"]=>
+//     string(57) "select * from zyblog_test_user where username = :username"
+//   }
+
 // 没有指定异常处理状态下的错误信息函数 
 $pdo_no_exception = new PDO($dns, 'root', '');
 $errStmt = $pdo_no_exception->prepare("select * from errtable");
@@ -20,13 +27,6 @@ var_dump($errStmt->errorInfo());
 //     string(40) "Table 'blog_test.errtable' doesn't exist"
 //   }
 
-
-// PDOStatement 对象的内容
-var_dump($stmt);
-// object(PDOStatement)#2 (1) {
-//     ["queryString"]=>
-//     string(57) "select * from zyblog_test_user where username = :username"
-//   }
 
 // 为语句设置默认的获取模式。
 $stmt->setFetchMode(PDO::FETCH_ASSOC);

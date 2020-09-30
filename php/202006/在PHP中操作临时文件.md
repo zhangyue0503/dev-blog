@@ -59,12 +59,16 @@ tempnam() 函数的第二个参数是指定生成文件名的前缀。tmpfile() 
 
 ## 总结
 
-又发现了这几个非常好像的函数，不管是做为临时缓存还是进行一些文件的创建，这两个临时文件操作的函数都非常有用。在日后的开发中我们可以多多尝试使用这样的函数，它们能够为我们带来不少的生产力提升。
+又发现了这几个非常好玩的函数，不管是做为临时缓存还是进行一些文件的创建，这两个临时文件操作的函数都非常有用。在日后的开发中我们可以多多尝试使用这样的函数，或许它们能够为我们带来不少的生产力提升。
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E5%9C%A8PHP%E4%B8%AD%E6%93%8D%E4%BD%9C%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E5%9C%A8PHP%E4%B8%AD%E6%93%8D%E4%BD%9C%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/function.sys-get-temp-dir.php](https://www.php.net/manual/zh/function.sys-get-temp-dir.php)
+
 [https://www.php.net/manual/zh/function.tmpfile.php](https://www.php.net/manual/zh/function.tmpfile.php)
+
 [https://www.php.net/manual/zh/function.tempnam.php](https://www.php.net/manual/zh/function.tempnam.php)

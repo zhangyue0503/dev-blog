@@ -18,7 +18,7 @@ echo A; // NewTestA
 
 ## 安装
 
-runkit 扩展的安装是需要在 githup 下载然后进行正常的扩展编译即可，pecl 下载的已经过时了。
+runkit 扩展的安装是需要在 github 下载然后进行正常的扩展编译即可，pecl 下载的已经过时了。
 
 PHP5: [http://github.com/zenovich/runkit](http://github.com/zenovich/runkit)
 

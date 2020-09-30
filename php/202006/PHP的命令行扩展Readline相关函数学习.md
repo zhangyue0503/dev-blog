@@ -6,7 +6,7 @@ PHP 作为一个 Web 开发语言，相对来说，命令行程序并不是它�
 
 ## Readline 扩展的安装
 
-Readline 扩展已经加入了 PHP 的官方安装包中，所以我们直接安装这个扩展是比较困难的，如果是新的 PHP 环境，那么在编译的时候加上 --with-readline 即可。另外，我们还需要安装操作系统的 Readline 库。当然，如果已经是正常运行的 PHP ，也可以重新编译一下。
+Readline 扩展已经加入了 PHP 的官方安装包中，如果是新的 PHP 环境，那么在编译的时候加上 --with-readline 即可。另外，我们还需要安装操作系统的 Readline 库。当然，如果已经是正常运行的 PHP ，也可以重新编译一下。
 
 ```shell
 # yum install -y readline-devel
@@ -141,9 +141,9 @@ if($line == 'exit' || $line == 'quit'){
 }
 ```
 
-readline_completion_function() 函数会接收一个回调函数，当在交互式命令行模式下，也就是 readline 函数调用时，按下 Tab 键的时候，就会进入到这个函数的回调函数中。$input 是当前已经输入内容的值，$index 是第几个字符了。我们在这个回调函数中定义了几个默认的命令，当你键入一个 n 时直接按 Tab 键，程序就是提示出完整的 next 命令出来。当然，多个相同的字母开头的都是可以通过这个 $matches 数组返回呈现的。
+readline_completion_function() 函数会接收一个回调函数，当在交互式命令行模式下，也就是 readline 函数调用时，按下 Tab 键的时候，就会进入到这个函数的回调函数中。\\$input 是当前已经输入内容的值，$index 是第几个字符。我们在这个回调函数中定义了几个默认的命令，当你键入一个 n 时直接按 Tab 键，程序就是提示出完整的 next 命令出来。当然，多个相同的字母开头的都是可以通过这个 $matches 数组返回呈现的。
 
-这段代码中，如果我们输入了 exit 或者 quit 。将退出程序的运行。
+此外，在这段代码中，如果我们输入了 exit 或者 quit 。将退出程序的运行。
 
 ## 字符回调操作相关示例
 
@@ -229,7 +229,7 @@ print_r(readline_list_history());
 // )
 ```
 
-首先，我们先不客上面的这个自定义的函数，直接向下看到 readline_callback_read_char() 。它的作用是当一个行被接收时读取一个字符并且通知 readline 调用回调函数。也就是当一行输入完成后，键入了回车之后，这个函数将通知 Readline 组件去调用 readline_callback_handler_install() 注册的回调函数。
+首先，我们先不管上面的这个自定义的函数，直接向下看到 readline_callback_read_char() 。它的作用是当一个行被接收时读取一个字符并且通知 readline 调用回调函数。也就是当一行输入完成后，键入了回车之后，这个函数将通知 Readline 组件去调用 readline_callback_handler_install() 注册的回调函数。
 
 readline_callback_handler_install() 函数的功能是初始化一个 readline 回调接口，然后终端输出提示信息并立即返回，如果在回调函数中不进行什么操作的话，这个函数就只是输出一个提示就结束了。在我们例子中的这个回调函数 rl_callback() 中，我们根据当前接收命令的次数，判断如果接收的命令在十次内，则继续接收命令直到十次命令为止就调用 readline_callback_handler_remove() 移除上一个 readline_callback_handler_install() 安装的回调并恢复终端的默认设置。
 
@@ -241,7 +241,7 @@ Readline 很强大，而且也是 PHP 默认安装包中自带的扩展。一般
 
 测试代码：
 
-[]()
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%A9%E5%B1%95Readline%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E5%AD%A6%E4%B9%A0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%A9%E5%B1%95Readline%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E5%AD%A6%E4%B9%A0.php)
 
 参考文档：
 

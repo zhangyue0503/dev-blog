@@ -97,8 +97,8 @@ echo 'c == c1:', $c == $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // TRUE
 echo 'c === c1:', $c === $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // FALSE
 
 $c1->t4 = 'f'; // 增加了一个属性
-echo 'c > c1:', $c > $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // TRUE
-echo 'c < c1:', $c < $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // FALSE
+echo 'c > c1:', $c > $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // FALSE
+echo 'c < c1:', $c < $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // TRUE
 echo 'c == c1:', $c == $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // FALSE
 echo 'c === c1:', $c === $c1 ? 'TRUE' : 'FALSE', PHP_EOL; // FALSE
 
