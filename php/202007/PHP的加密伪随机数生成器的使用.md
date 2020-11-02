@@ -43,9 +43,11 @@ var_dump(random_int(-1000, 0));
 
 ## 总结
 
-内容非常简单，而且还发现了 random_bytes() 这个函数的秒用，以后不用再自己去写随机生成 salt 的函数了，就像我们之间介绍密码加盐文章中 [什么叫给密码“加盐”？如何安全的为你的用户密码“加盐”？](https://mp.weixin.qq.com/s/yajIbFH3ghFzQ3Onqc3zNA) 的那个随机字符生成函数（generateSalt）基本就可以用这个来替代了。是不是感觉收获满满呢，学习的脚本从未停下，让我们继续一起探索更好玩的内容吧！！
+今天的内容非常简单，而且还发现了 random_bytes() 这个函数的秒用，以后不用再自己去写随机生成 salt 的函数了，就像我们之间介绍密码加盐文章中 [什么叫给密码“加盐”？如何安全的为你的用户密码“加盐”？](https://mp.weixin.qq.com/s/yajIbFH3ghFzQ3Onqc3zNA) 的那个随机字符生成函数（generateSalt）基本就可以用这个来替代了。是不是感觉收获满满呢，学习的脚步从未停下，让我们继续一起探索更好玩的内容吧！！
 
 测试代码：
+
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84%E5%8A%A0%E5%AF%86%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84%E5%8A%A0%E5%AF%86%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8.php)
 
 参考文档：
 

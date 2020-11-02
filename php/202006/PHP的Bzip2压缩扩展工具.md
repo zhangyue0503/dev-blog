@@ -109,6 +109,8 @@ bzclose($bz);
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E7%9A%84Bzip2%E5%8E%8B%E7%BC%A9%E6%89%A9%E5%B1%95%E5%B7%A5%E5%85%B7.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E7%9A%84Bzip2%E5%8E%8B%E7%BC%A9%E6%89%A9%E5%B1%95%E5%B7%A5%E5%85%B7.php)
+
 参考文档：
 
 [https://www.php.net/manual/zh/book.bzip2.php](https://www.php.net/manual/zh/book.bzip2.php)

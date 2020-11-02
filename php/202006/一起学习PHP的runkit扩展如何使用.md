@@ -153,8 +153,10 @@ runkit_method_remove('Example', 'func1');
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E4%B8%80%E8%B5%B7%E5%AD%A6%E4%B9%A0PHP%E7%9A%84runkit%E6%89%A9%E5%B1%95%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/%E4%B8%80%E8%B5%B7%E5%AD%A6%E4%B9%A0PHP%E7%9A%84runkit%E6%89%A9%E5%B1%95%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8.php)
 
 参考文档：
 
 [https://www.php.net/manual/zh/book.runkit.php](https://www.php.net/manual/zh/book.runkit.php)
+
 [https://www.php.net/manual/zh/book.runkit7.php](https://www.php.net/manual/zh/book.runkit7.php)

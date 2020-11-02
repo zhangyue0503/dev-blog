@@ -12,7 +12,7 @@
 // // Authorization: Basic YWFhOmFhYQ==
 // echo base64_decode('YWFhOmFhYQ==');
 // // aaa:aaa 等于明文
-// // exit;
+// exit;
 
 $realm = 'Restricted area';
 
@@ -31,6 +31,14 @@ if (empty($_SERVER['PHP_AUTH_DIGEST']) || !$_COOKIE['login']) {
     
 }
 
+if($_GET['logout']){
+    setcookie("login", 0);
+    header("Location: /");
+    header('HTTP/1.1 401 Unauthorized');
+    header('WWW-Authenticate: Digest realm="' . $realm .
+        '",qop="auth",nonce="' . uniqid() . '",opaque="' . md5($realm) . '"');
+}
+
 // 验证用户登录信息
 if (!($data = http_digest_parse($_SERVER['PHP_AUTH_DIGEST'])) ||
     !isset($users[$data['username']])) {
@@ -44,6 +52,7 @@ $valid_response = md5($A1 . ':' . $data['nonce'] . ':' . $data['nc'] . ':' . $da
 // $data['response'] 是浏览器客户端的加密内容
 if ($data['response'] != $valid_response) {
     die('Wrong Credentials!');
+    
 }
 
 // 用户名密码验证成功
@@ -73,8 +82,4 @@ function http_digest_parse($txt)
     return $needed_parts ? false : $data;
 }
 
-if($_GET['logout']){
 
-    setcookie("login", 0);
-    header("Location: /");
-}

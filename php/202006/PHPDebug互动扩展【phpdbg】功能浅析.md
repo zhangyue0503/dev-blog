@@ -93,7 +93,7 @@ prompt> r
 prompt> 
 ```
 
-可以看出，在第一次运行 r 的时候， phpdbg 将整个文件进行了一次扫描并输出了当前的两个断点信息。然后再运行一次 r 则定位到了第3行，也就是第一个断点的位置。接下来，我们就要进行单点调试了，我们直接使用 step 的简写命令 s 。
+可以看出，在第一次运行 r 的时候， phpdbg 将整个文件进行了一次扫描并输出了当前的两个断点信息。然后再运行一次 r 则定位到了第3行，也就是第一个断点的位置。接下来，我们就要进行单步调试了，我们直接使用 step 的简写命令 s 。
 
 ```shell
 prompt> s
@@ -244,7 +244,7 @@ prompt> b testFunc#3
 [Breakpoint #1 added at testFunc#3]
 ```
 
-#2 这是什么意思呢？其实就是说我们在这个方法体内部的第 2 行增加一个断点。也就是说，我们在 $i += 3; 这一行增加了一个断点。行数是从方法定义那一行开始算的并且是从 1 开始，如果不加这个行数，就是直接从方法定义那一行开始。
+#3 这是什么意思呢？其实就是说我们在这个方法体内部的第 3 行增加一个断点。也就是说，我们在 $i += 3; 这一行增加了一个断点。行数是从方法定义那一行开始算的并且是从 1 开始，如果不加这个行数，就是直接从方法定义那一行开始。
 
 ```shell
 prompt> r
@@ -266,5 +266,8 @@ prompt> r
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHPDebug%E4%BA%92%E5%8A%A8%E6%89%A9%E5%B1%95.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHPDebug%E4%BA%92%E5%8A%A8%E6%89%A9%E5%B1%95.php)
+
 参考文档：
+
 [https://www.php.net/manual/zh/intro.phpdbg.php](https://www.php.net/manual/zh/intro.phpdbg.php)

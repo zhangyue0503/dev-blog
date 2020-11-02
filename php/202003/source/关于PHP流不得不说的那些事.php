@@ -42,6 +42,8 @@ echo PHP_EOL;
 // 使用 php://input 获取 post body 内容
 echo file_get_contents("php://input");
 
+
+
 // memory temp
 $mem = fopen('php://memory', 'r+');
 for ($i = 0; $i < 10; $i++) {
@@ -52,6 +54,7 @@ while ($info = fgets($mem)) {
     echo $info, PHP_EOL;
 }
 fclose($mem);
+
 
 // filter
 readfile("php://filter/read=string.toupper/resource=http://www.baidu.com");

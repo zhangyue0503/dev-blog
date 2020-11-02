@@ -59,7 +59,7 @@ echo getenv("REQUEST_METHOD"), PHP_EOL; // GET
 echo getenv("REQUEST_METHOD", true), PHP_EOL; // 
 ```
 
-在第二个参数不为 true 的情况下，我们可以通过 getenv() 获得 $_SERVER 、$_ENV 中的所有内容，但是，如果第二个参数为 true 的话，那么类似于 Nginx 为我们添加的那些环境变量就无法获取了。这就是第二个参数的作用，上面代码中 REQUEST_METHOD 就是 Nginx 为我们添加的环境变量，所以第二条输出语句就不会进行输出。
+在第二个参数不为 true 的情况下，我们可以通过 getenv() 获得 \\$_SERVER 、$_ENV 中的所有内容，但是，如果第二个参数为 true 的话，那么类似于 Nginx 为我们添加的那些环境变量就无法获取了。这就是第二个参数的作用，上面代码中 REQUEST_METHOD 就是 Nginx 为我们添加的环境变量，所以第二条输出语句就不会进行输出。
 
 ## putenv() 设置环境变量信息
 
@@ -81,7 +81,11 @@ safe_mode_protected_env_vars 指令包含了逗号分隔的环境变量列表，
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E4%B8%AD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%93%8D%E4%BD%9C.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202006/source/PHP%E4%B8%AD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%93%8D%E4%BD%9C.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/function.putenv.php](https://www.php.net/manual/zh/function.putenv.php)
+
+
 [https://www.php.net/manual/zh/function.getenv.php](https://www.php.net/manual/zh/function.getenv.php)

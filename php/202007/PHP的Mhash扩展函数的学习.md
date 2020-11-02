@@ -1,6 +1,6 @@
 # PHP的Mhash扩展函数的学习
 
-这次我们要学习的又是一个 Hash 加密扩展。不过这个扩展 Mhash 已经集成在了 Hash 扩展中。同时也需要注意的是，这个扩展已经不推荐使用了，我们应该直接使用 Hash 扩展中的函数来进行 Hash 加密操作。所以，我们今天仍然是以学习为目的的进行了解。关于 Hash 扩展的内容，我们可以查看之前的文章：[PHP的Hash信息摘要扩展框架]() 。
+这次我们要学习的又是一个 Hash 加密扩展。不过这个扩展 Mhash 已经集成在了 Hash 扩展中。同时也需要注意的是，这个扩展已经不推荐使用了，我们应该直接使用 Hash 扩展中的函数来进行 Hash 加密操作。所以，我们今天仍然是以学习为目的的进行了解。关于 Hash 扩展的内容，我们可以查看之前的文章：[PHP的Hash信息摘要扩展框架](https://mp.weixin.qq.com/s/1qAkPkMWcxq_kIoq8b2vOw) 。
 
 ## 加密散列函数的使用
 
@@ -99,6 +99,7 @@ echo bin2hex($hashPassword), PHP_EOL;
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84Mhash%E6%89%A9%E5%B1%95%E5%87%BD%E6%95%B0%E7%9A%84%E5%AD%A6%E4%B9%A0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84Mhash%E6%89%A9%E5%B1%95%E5%87%BD%E6%95%B0%E7%9A%84%E5%AD%A6%E4%B9%A0.php)
 
 参考文档：
 

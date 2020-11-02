@@ -55,7 +55,7 @@ var_dump($date->add(new DateInterval('P3D')));
 //     ["timezone"]=>
 //     string(13) "Asia/Shanghai"
 //   }
-exit;
+
 
 
 $date->add(new DateInterval('P3D'));

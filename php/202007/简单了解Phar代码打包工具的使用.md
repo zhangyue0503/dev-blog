@@ -1,6 +1,6 @@
 # 简单了解Phar代码打包工具的使用
 
-Phar 是在 PHP5 之后提供的一种类似于将代码打包的工具。本质上是想依照 Java 的 Jar 文件那种形式的代码包，不过本身由于 PHP 是不编译的，所以这个 Phar 实际上就是将代码原样的进行打包，不会进行编译。但是我们可能对打包的 Phar 包进行压缩操作。
+Phar 是在 PHP5 之后提供的一种类似于将代码打包的工具。本质上是想依照 Java 的 Jar 文件那种形式的代码包，不过本身由于 PHP 是不编译的，所以这个 Phar 实际上就是将代码原样的进行打包，不会进行编译。但是我们可以对打包的 Phar 包进行压缩操作。
 
 另外，实际上使用过 Phar 包的人非常少，特别是在 Composer 已经成为事实代码库标准的今天，Phar 就更加难觅踪影了。不过，Composer 的安装包本身也是一个 .phar 的打包文件。最主要的原因，一个是 Phar 这种形式的代码包安装并不像 Composer 一样的简单方便，另一方面，早期的程序员，特别是 LAMP/LAMP 的程序员，都喜欢去将开源的代码复制过来，而不喜欢直接使用一个工具包。毕竟，源代码在手上让我们更加踏实一些。其实，就算是 Composer 这样直接下载的就是源码，我们也从来没什么人真正的去翻过。而 Composer 相比 Phar 的最大优势，一个是代码的自动加载，另一个就是标准的 PSR 命令空间和目录规范。这两个在 Phar 中是没有的，所以我们要使用 Phar 包都必须要 require 一下。
 
@@ -187,7 +187,7 @@ echo '==================', PHP_EOL;
 
 ## 数据格式 Phar
 
-最后，如果只是为了打包压缩功能的话，我们没必要使用 Phar 类。Phar 类最主要的还是用来打包能够运行的 PHP 源码，也就是 它的 createDefaultStub() 方法非常重要。而如果只是打包普通文件的话，我们并不需要这个方法，这时，我们就可以使用另外一个 PharData 类来进行数据的打包压缩。使用方法和 Phar 类是一模一样的。同时，PharData 类可以直接打包成 tar 之类的文件。
+最后，如果只是为了打包压缩功能的话，我们没必要使用 Phar 类。Phar 类最主要的还是用来打包能够运行的 PHP 源码，也就是它的 createDefaultStub() 方法非常重要。而如果只是打包普通文件的话，我们并不需要这个方法，这时，我们就可以使用另外一个 PharData 类来进行数据的打包压缩。使用方法和 Phar 类是一模一样的。同时，PharData 类可以直接打包成 tar 之类的文件。
 
 ```php
 $p = new PharData('./myData.tar');
@@ -216,13 +216,18 @@ echo '==================', PHP_EOL;
 
 ## 总结
 
-说实话，Phar 真的是一个冷门项目，但是在某些情况中又非常有用，比如它虽然在代码包领域被 Composer 打败了，但是它又可以成为 Composer 的安装包，也就是说，没有 Phar 你就安装不了 Composer。而做为压缩工具，虽然有强大的实力但使用的却也非常的少。因此，我们还是以了解为目的，如果感觉某些场景非常合适的话，也完全可以深入的研究拿来放到我们的实际项目中使用。毕竟它是 PHP 的一部分，不需要任何的编译安装及其它支持，非常原生。
+说实话，Phar 真的是一个冷门项目，但是在某些情况中又非常有用，比如它虽然在代码包领域被 Composer 打败了，但是它又可以成为 Composer 的安装包，也就是说，没有 Phar 你就安装不了 Composer 。而做为压缩工具，虽然有强大的实力但使用的却也非常的少。因此，我们还是以了解为目的，如果感觉某些场景非常合适的话，也完全可以深入的研究拿来放到我们的实际项目中使用。毕竟它是 PHP 的一部分，不需要任何的编译安装及其它支持，非常原生。
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3Phar%E4%BB%A3%E7%A0%81%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3Phar%E4%BB%A3%E7%A0%81%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8.php)
 
 参考文档：
 
 [https://www.php.net/manual/zh/book.phar.php](https://www.php.net/manual/zh/book.phar.php)
+
 [https://www.webhek.com/post/packaging-your-php-apps-with-phar.html](https://www.webhek.com/post/packaging-your-php-apps-with-phar.html)
+
 [http://www.mamicode.com/info-detail-888559.html](http://www.mamicode.com/info-detail-888559.html)
+
+

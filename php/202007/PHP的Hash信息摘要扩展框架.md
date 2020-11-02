@@ -223,9 +223,12 @@ echo $v2, PHP_EOL;
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84Hash%E4%BF%A1%E6%81%AF%E6%91%98%E8%A6%81%E6%89%A9%E5%B1%95%E6%A1%86%E6%9E%B6.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84Hash%E4%BF%A1%E6%81%AF%E6%91%98%E8%A6%81%E6%89%A9%E5%B1%95%E6%A1%86%E6%9E%B6.php)
 
 参考文档：
 
 [https://www.php.net/manual/zh/book.hash.php](https://www.php.net/manual/zh/book.hash.php)
+
 [https://www.zhihu.com/question/20156213](https://www.zhihu.com/question/20156213)
+
 [https://baike.baidu.com/item/%E6%97%B6%E5%BA%8F%E6%94%BB%E5%87%BB/17882818?fr=aladdin](https://baike.baidu.com/item/%E6%97%B6%E5%BA%8F%E6%94%BB%E5%87%BB/17882818?fr=aladdin)

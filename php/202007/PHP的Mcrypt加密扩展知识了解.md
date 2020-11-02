@@ -111,11 +111,14 @@ echo $result, PHP_EOL; // Test MCrypt2
 
 ## 总结
 
-相对于 Hash 来说，Mcrypt 是可解密的对称加密形式。关于什么是对称和非对称加密，我们将在 OpenSSL 扩展的学习中详细地讲解，而 Hash 加密则是单向的加密形式，是无法通过加密后的数据反向计算获得原始数据的。它们都有不同的应用场景，不过就像 PHP 提示的那样，Mcrypt 已经是不推荐使用的扩展了，所以我们在这里只是简单的进行了加/解官的测试而已，如果有用到的小伙伴，可以根据手册进行更深入地学习。
+相对于 Hash 来说，Mcrypt 是可解密的对称加密形式。关于什么是对称和非对称加密，我们将在 OpenSSL 扩展的学习中详细地讲解，而 Hash 加密则是单向的加密形式，是无法通过加密后的数据反向计算获得原始数据的。它们都有不同的应用场景，不过就像 PHP 提示的那样，Mcrypt 已经是不推荐使用的扩展了，所以我们在这里只是简单的进行了加/解密的测试而已，如果有用到的小伙伴，可以根据手册进行更深入地学习。
 
 测试代码：
+
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84Mcrypt%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%E4%BA%86%E8%A7%A3.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84Mcrypt%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%E4%BA%86%E8%A7%A3.php)
 
 参考文档：
 
 [https://www.php.net/manual/zh/book.mcrypt.php](https://www.php.net/manual/zh/book.mcrypt.php)
+
 [https://ask.csdn.net/questions/700696](https://ask.csdn.net/questions/700696)
