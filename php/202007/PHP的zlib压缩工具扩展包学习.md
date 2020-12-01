@@ -41,7 +41,7 @@ echo PHP_EOL;
 gzclose($zp);
 ```
 
-简单的读取操作其实非常简单，直接使用 gzpassthru() 就可以输出当前压缩包里面的内容，并且是直接打印出来。当然，它也是以类似于文件指针的形式进行输出的，所以如果我们输出过一次之后，就必须要使用 gzrewind() 将指针的游标还原到句柄最开始的位置。
+读取操作其实也非常简单，直接使用 gzpassthru() 就可以输出当前压缩包里面的内容，并且是直接打印出来。当然，它也是以类似于文件指针的形式进行输出的，所以如果我们输出过一次之后，就必须要使用 gzrewind() 将指针的游标还原到句柄最开始的位置。
 
 对于 zlib 的压缩包来说，我们还有很多其它的方式可以进行文件内容的读取。
 
@@ -158,7 +158,7 @@ echo $uncompressed;
 // 数据压缩，更多数据，继续添加更多数据！
 ```
 
-就像例子中展示的那样，deflate_add() 用于增量的添加内容到编码文件中，当标志为 ZLIB_FINISH 时结束操作的写入。deflate_init() 和 inflate_init() 分别是编码和反编码对应的操作。
+就像例子中展示的那样，deflate_add() 用于增量的添加内容到编码文件中，当标志为 ZLIB_FINISH 时结束操作的写入。deflate_init() 和 inflate_init() 分别是编码和反编码对应的初始化操作。
 
 ## 总结
 
@@ -166,8 +166,10 @@ echo $uncompressed;
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84zlib%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7%E6%89%A9%E5%B1%95%E5%8C%85%E5%AD%A6%E4%B9%A0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84zlib%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7%E6%89%A9%E5%B1%95%E5%8C%85%E5%AD%A6%E4%B9%A0.php)
 
 参考文档：
 
 [https://www.php.net/manual/zh/book.zlib.php](https://www.php.net/manual/zh/book.zlib.php)
+
 [https://www.php.cn/php-weizijiaocheng-377246.html](https://www.php.cn/php-weizijiaocheng-377246.html)

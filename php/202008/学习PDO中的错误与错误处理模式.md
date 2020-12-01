@@ -80,6 +80,8 @@ PDO 已经是现在的主流数据库连接扩展，也是各种框架的必备�
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/%E5%AD%A6%E4%B9%A0PDO%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%E4%B8%8E%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/%E5%AD%A6%E4%B9%A0PDO%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%E4%B8%8E%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F.php)
+
 参考文档：
 
 [https://www.php.net/manual/zh/pdo.error-handling.php](https://www.php.net/manual/zh/pdo.error-handling.php)

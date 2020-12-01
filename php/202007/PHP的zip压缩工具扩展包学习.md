@@ -1,4 +1,4 @@
-# PHP的zip压缩工具扩展懈学习
+# PHP的zip压缩工具扩展包学习
 
 总算到了 PHP 的拿手好戏上场了，前面我们学习过 Bzip2 、 LZF 、 Phar 和 rar 这些压缩相关扩展在 PHP 中的使用，不过它们要么是太冷门，要么就是很多功能不支持。而 Zip 则是在 PHP 中得到最大幅度功能支持的热门压缩格式，或者说是通用常见的一种压缩格式。当然，也主要得益于 Zip 也是事实上的 Linux 环境中的通用压缩格式。
 
@@ -39,9 +39,9 @@ $zip->close();
 //      2182                     3 files
 ```
 
-之前学习过的 rar 扩展是无法打包文件或者创建新的压缩包的，而 Zip 一上来我们就学习的是创建一个新的压缩包。通过实例化一个 ZipArchive 对象后，我们就可以使用 open() 函数打开或创建一个压缩包文件。接着，我们使用了两种添加内容的方式。addFromString() 是加入文字类型的文件，也就是将一段文字转换成文本文件保存在这个压缩包中。另外，我们通过 addFIle() 来将外部的文件加入到这个压缩包中。
+之前学习过的 rar 扩展是无法打包文件或者创建新的压缩包的，而 Zip 一上来我们就学习的是创建一个新的压缩包。通过实例化一个 ZipArchive 对象后，我们就可以使用 open() 函数打开或创建一个压缩包文件。接着，我们使用了两种添加内容的方式。addFromString() 是加入文字类型的文件，也就是将一段文字转换成文本文件保存在这个压缩包中。另外，我们通过 addFile() 来将外部的文件加入到这个压缩包中。
 
-numFiles 和 status 属性可以分别查看到压缩包文件里面的文件数量及当前这个压缩包的状态信息。最后直接使用 close() 关闭句柄即可。这样，一个简单的 Zip 压缩包文件就创建完成了。我们直接使用操作系统的 unzip 命令来查看压缩包的内容。
+numFiles 和 status 属性可以分别查看到压缩包文件里面的文件数量及当前这个压缩包的状态信息。最后直接使用 close() 关闭句柄即可。这样，一个简单的 Zip 压缩包文件就创建完成了。我们可以直接使用操作系统的 unzip 命令来查看压缩包的内容。
 
 ## 读取压缩包内容及信息
 
@@ -192,6 +192,8 @@ copy('zip://' . dirname(__FILE__) . '/test_zip2.zip#newrar.php', './newrar2.php'
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84zip%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7%E6%89%A9%E5%B1%95%E5%8C%85%E5%AD%A6%E4%B9%A0.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84zip%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7%E6%89%A9%E5%B1%95%E5%8C%85%E5%AD%A6%E4%B9%A0.php)
 
 参考文档：
+
 [https://www.php.net/manual/zh/book.zip.php](https://www.php.net/manual/zh/book.zip.php)

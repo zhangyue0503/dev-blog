@@ -11,7 +11,9 @@ var_dump(debug_backtrace());
 
 a_test("A");
 
-// Hi: A/Users/zhangyue/MyDoc/博客文章/dev-blog/php/202004/source/PHP打印跟踪调试信息.php:7:
+// array(0) {
+// }
+// Hi: A
 // array(1) {
 //   [0] =>
 //   array(4) {
