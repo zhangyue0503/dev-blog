@@ -111,6 +111,8 @@ print_r(openssl_get_cipher_methods());
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84OpenSSL%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202007/source/PHP%E7%9A%84OpenSSL%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.php)
+
 参考文档：
 
 [https://www.php.net/manual/zh/function.openssl-encrypt.php](https://www.php.net/manual/zh/function.openssl-encrypt.php)

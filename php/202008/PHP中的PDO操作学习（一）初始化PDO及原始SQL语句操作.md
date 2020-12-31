@@ -385,7 +385,7 @@ foreach ($stmt as $row) {
 
 ## 增、删、改操作
 
-除了查询之外的操作，我们都可以使用 exec() 方法来执行相应的 SQL 语句。
+除了查询之外的操作，我们也可以使用 exec() 方法来执行其他一些相应的 SQL 语句。
 
 ### 增加操作
 
@@ -444,6 +444,8 @@ var_dump($count); // int(0)
 不学不知道，一学吓一跳吧，简简单的一个 PDO 的创建和语句执行竟然有这么多的内容。对于我们的日常开发来说，掌握这些原理能够避免很多莫名其妙的问题，比如上面 exec() 只是返回影响行数在业务开发中如何判断操作是否成功的问题就很典型。好了，这只是第一篇，后面的学习不要落下了哦！
 
 测试代码：
+
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP%E4%B8%AD%E7%9A%84PDO%E6%93%8D%E4%BD%9C%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%88%9D%E5%A7%8B%E5%8C%96PDO%E5%8F%8A%E5%8E%9F%E5%A7%8BSQL%E8%AF%AD%E5%8F%A5%E6%93%8D%E4%BD%9C.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP%E4%B8%AD%E7%9A%84PDO%E6%93%8D%E4%BD%9C%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%88%9D%E5%A7%8B%E5%8C%96PDO%E5%8F%8A%E5%8E%9F%E5%A7%8BSQL%E8%AF%AD%E5%8F%A5%E6%93%8D%E4%BD%9C.php)
 
 参考文档：
 

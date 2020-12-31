@@ -76,7 +76,7 @@ var_dump($aUser);
 //       ……
 ```
 
-当然，这种预编译语句不仅限于查询语句，增、删、改都是可以的，而且也都是支持占位符的。在 [PHP中操作数据库的预处理语句]() 这篇文章中有详细的示例。
+当然，这种预编译语句不仅限于查询语句，增、删、改都是可以的，而且也都是支持占位符的。在 [PHP中操作数据库的预处理语句](https://mp.weixin.qq.com/s/7oQTZeEocnx24GEkHnyG8w) 这篇文章中有详细的示例。
 
 ## 事务能力
 
@@ -123,6 +123,8 @@ rollBack() 是回滚数据，当 beginTransaction() 之后的某一条语句或�
 我们简单的梳理并学习了一下 PDO 中的预处理和事务相关的知识，接下来就要进入 PDOStatement 对象相关内容的学习。PDOStatement 对象就是 PDO 的预处理对象，也就是在日常开发中我们会接触到的最多的数据操作对象。这块可是重点内容，大家可不能松懈了哦！
 
 测试代码：
+
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP%E4%B8%AD%E7%9A%84PDO%E6%93%8D%E4%BD%9C%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5%E5%8F%8A%E4%BA%8B%E5%8A%A1.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP%E4%B8%AD%E7%9A%84PDO%E6%93%8D%E4%BD%9C%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5%E5%8F%8A%E4%BA%8B%E5%8A%A1.php)
 
 参考文档：
 

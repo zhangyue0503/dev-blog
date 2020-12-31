@@ -80,6 +80,8 @@ var_dump(sodium_crypto_pwhash_str_verify($hash, $password));
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP%E7%9A%84Sodium%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP%E7%9A%84Sodium%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3.php)
+
 参考文档：
 
 [https://www.php.net/manual/en/book.sodium.php](https://www.php.net/manual/en/book.sodium.php)

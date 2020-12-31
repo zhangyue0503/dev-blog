@@ -103,6 +103,7 @@ try {
 
 测试代码：
 
+[https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP中使用PDO操作事务的一些小测试.php](https://github.com/zhangyue0503/dev-blog/blob/master/php/202008/source/PHP中使用PDO操作事务的一些小测试.php)
 
 参考文档：
 
