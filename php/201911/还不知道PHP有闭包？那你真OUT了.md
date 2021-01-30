@@ -176,7 +176,7 @@ $arr1Params = ' is good!';
 // print_r($arr1);
 
 array_walk($arr1, function (&$v) use ($arr1Params) {
-    $v .= ' is good!';
+    $v .= $v['name'] . ' is good!';
 });
 print_r($arr1);
 
