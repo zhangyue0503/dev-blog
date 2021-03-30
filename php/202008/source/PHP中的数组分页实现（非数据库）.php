@@ -74,12 +74,13 @@ var_dump($pages);
 var_dump($pages[$currentPage]);
 // array(3) {
 //     [0]=>
-//     string(1) "A"
+//     string(1) "D"
 //     [1]=>
-//     string(1) "B"
+//     string(1) "E"
 //     [2]=>
-//     string(1) "C"
+//     string(1) "F"
 //   }
+
 
 // LimitIterator
 
