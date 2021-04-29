@@ -1,67 +1,67 @@
 <?php
 
-// $_SERVER['HTTP_ACCEPT_LANGUAGE'] = zh-CN,zh;q=0.9;
-$browserLocale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+// // $_SERVER['HTTP_ACCEPT_LANGUAGE'] = zh-CN,zh;q=0.9;
+// $browserLocale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
-print_r($browserLocale);
-echo '<br/>';
-// zh
+// print_r($browserLocale);
+// echo '<br/>';
+// // zh
 
-$locale = ['en', 'fr-FR', 'da, en-gb;q=0.8, en;q=0.7', 'zh-cn', 'zh-tw', 'en-us', 'en-ca', 'ja-jp'];
-foreach($locale as $code){
-    print_r(Locale::acceptFromHttp($code));
-    echo '<br/>';
-}
-// en
-// fr_FR
-// da
-// zh
-// zh
-// en_US
-// en_CA
-// ja_JP
+// $locale = ['en', 'fr-FR', 'da, en-gb;q=0.8, en;q=0.7', 'zh-cn', 'zh-tw', 'en-us', 'en-ca', 'ja-jp'];
+// foreach($locale as $code){
+//     print_r(Locale::acceptFromHttp($code));
+//     echo '<br/>';
+// }
+// // en
+// // fr_FR
+// // da
+// // zh
+// // zh
+// // en_US
+// // en_CA
+// // ja_JP
 
 $locale = ['en', 'fr-FR', 'en-gb', 'zh-cn','en-us', 'ko-kr', 'ja-jp'];
 
-$money = 1234567.89;
+// $money = 1234567.89;
 
+// foreach($locale as $code){
+//     $numberformat = new NumberFormatter($code, NumberFormatter::DECIMAL);
+//     echo $code, ":";
+//     echo $numberformat->format($money), ', ';
+//     echo $numberformat->parse($numberformat->format($money)), '<br/>';
+// }
+// // en:1,234,567.89, 1234567.89
+// // fr-FR:1 234 567,89, 
+// // en-gb:1,234,567.89, 1234567.89
+// // zh-cn:1,234,567.89, 1234567.89
+// // en-us:1,234,567.89, 1234567.89
+// // ko-kr:1,234,567.89, 1234567.89
+// // ja-jp:1,234,567.89, 1234567.89
+
+// foreach($locale as $code){
+//     $numberformat = new NumberFormatter($code, NumberFormatter::PERCENT);
+//     echo $code, ":";
+//     echo $numberformat->format($money), '<br/>';
+// }
+// // en:¤1,234,567.89
+// // fr-FR:1 234 567,89 €
+// // en-gb:£1,234,567.89
+// // zh-cn:￥1,234,567.89
+// // en-us:$1,234,567.89
+// // ko-kr:₩1,234,568
+// // ja-jp:￥1,234,568
+
+
+// $date = '2020-09-25 11:05:22';
 foreach($locale as $code){
-    $numberformat = new NumberFormatter($code, NumberFormatter::DECIMAL);
-    echo $code, ":";
-    echo $numberformat->format($money), ', ';
-    echo $numberformat->parse($numberformat->format($money)), '<br/>';
-}
-// en:1,234,567.89, 1234567.89
-// fr-FR:1 234 567,89, 
-// en-gb:1,234,567.89, 1234567.89
-// zh-cn:1,234,567.89, 1234567.89
-// en-us:1,234,567.89, 1234567.89
-// ko-kr:1,234,567.89, 1234567.89
-// ja-jp:1,234,567.89, 1234567.89
-
-foreach($locale as $code){
-    $numberformat = new NumberFormatter($code, NumberFormatter::PERCENT);
-    echo $code, ":";
-    echo $numberformat->format($money), '<br/>';
-}
-// en:¤1,234,567.89
-// fr-FR:1 234 567,89 €
-// en-gb:£1,234,567.89
-// zh-cn:￥1,234,567.89
-// en-us:$1,234,567.89
-// ko-kr:₩1,234,568
-// ja-jp:￥1,234,568
-
-
-$date = '2020-09-25 11:05:22';
-foreach($locale as $code){
-    $l = new Locale($code);
+    // $l = new Locale($code);
     
     $d = new IntlDateFormatter($code, IntlDateFormatter::FULL, IntlDateFormatter::FULL);
     $c = IntlCalendar::createInstance(NULL, $code);
     $c->set('2020', '09', '25', '11', '22', '33');
     echo $code, ":";
-    echo $d->format($c), "<br/>";
+    echo $d->format($c), PHP_EOL;
 }
 
 // en:Friday, September 25, 2020 at 2:48:12 PM China Standard Time
