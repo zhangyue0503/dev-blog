@@ -99,13 +99,15 @@ var_dump($cal->getRepeatedWalltimeOption()); // int(0)
 var_dump($cal->getSkippedWalltimeOption()); // int(0)
 
 $cal->setFirstDayOfWeek(3);
-var_dump($cal->getFirstDayOfWeek());  // int(5)
+var_dump($cal->getFirstDayOfWeek());  // int(3)
 echo IntlDateFormatter::formatObject($cal, <<<EOD
 'local day of week: 'cc'
 week of month    : 'W'
 week of year     : 'ww
 EOD
 ), PHP_EOL;
+
+
 
 $cal->setMinimalDaysInFirstWeek(6);
 var_dump(IntlDateFormatter::formatObject($cal, "'Week 'w' of 'Y"));

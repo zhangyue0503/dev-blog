@@ -1,6 +1,6 @@
 <?php
 
-print_r(PDO::getAvailableDrivers());exit;
+print_r(PDO::getAvailableDrivers());
 // Array
 // (
 //     [0] => dblib
@@ -12,7 +12,7 @@ print_r(PDO::getAvailableDrivers());exit;
 
 $dns = 'mysql:host=localhost;dbname=blog_test;port=3306;charset=utf8';
 // https://www.php.net/manual/zh/ref.pdo-mysql.connection.php
-$pdo = new PDO($dns, 'root', '');
+$pdo = new PDO($dns, 'root', '', [PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC]);
 
 showPdoAttribute($pdo);
 // PDO::ATTR_DRIVER_NAME: mysql
@@ -27,7 +27,11 @@ showPdoAttribute($pdo);
 // PDO::ATTR_SERVER_INFO: Uptime: 176944  Threads: 1  Questions: 474  Slow queries: 0  Opens: 255  Flush tables: 1  Open tables: 233  Queries per second avg: 0.002
 // PDO::ATTR_SERVER_VERSION: 5.7.17
 // PDO::ATTR_TIMEOUT: 
-
+$stmt = $pdo->query('select * from zyblog_test_user limit 5');
+foreach ($stmt as $row) {
+    var_dump($row);
+}
+exit;
 
 $pdo = new PDO($dns, 'root', '', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 showPdoAttribute($pdo);

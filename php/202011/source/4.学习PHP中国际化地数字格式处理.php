@@ -67,7 +67,7 @@ echo $fmt->format(1234567.891234567890000), PHP_EOL; // 1,234,567.891
 
 $fmt->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 2);
 echo "Digits: ".$fmt->getAttribute(NumberFormatter::MAX_FRACTION_DIGITS), PHP_EOL; // Digits: 2
-echo $fmt->format(1234567.891234567890000), PHP_EOL; // 1,234,567.891
+echo $fmt->format(1234567.891234567890000), PHP_EOL; // 1,234,567.89
 
 var_dump($fmt->getLocale(Locale::VALID_LOCALE)); // string(10) "zh_Hans_CN"
 
