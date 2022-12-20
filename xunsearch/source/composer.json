@@ -1,0 +1,7 @@
+{
+    "require": {
+        "hightman/xunsearch": "^1.4",
+        "fukuball/jieba-php": "dev-master",
+        "teamtnt/tntsearch": "^3.0"
+    }
+}
