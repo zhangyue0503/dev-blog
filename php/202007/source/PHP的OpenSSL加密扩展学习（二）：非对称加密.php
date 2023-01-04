@@ -46,7 +46,7 @@ $publicKey = $publicKey['key'];
 $data = '测试非对称加密';
 
 // 公钥加密数据
-openssl_public_encrypt($data, $encrypted, $publicKey);
+openssl_public_encrypt($data, $encrypted, $publicKey,OPENSSL_PKCS1_PADDING);
 var_dump($encrypted);
 // string(512) "��E��2��~��\d����q�O�=(��Y���3L����0�,�J����s�V��V߬G~'�20���@��6�d�����#Z]�.��<Z��8G�����-ʝ�M�0](2��+$�*����\e�7ҕʴ��|SUw�#rFb�8"�s4K�B�Y�'�\S���~!<�"���!U��S(���S ��?e�֜r��/���c��L�YL�'ŖE*S��[�J�"�n��`(ʿoF$�|kC�*j_y�E�D�O����H5���6�t�TY����b5l^)�`�v�>�1��a��r�̹�D��������@�S�>�t|���匓�z~K�,���y��Gܬ��
 //                                                              yXZ�L#��c `rj睅,nX���@{7�:�qy�ʲnv�o§�@�@,�n&���I�~ǧ�z6���oe!8,T�����;җ�6�J@A��f����S]��!����2�b��+Oګ��o�<�
