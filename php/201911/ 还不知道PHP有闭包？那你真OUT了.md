@@ -171,12 +171,12 @@ $arr1 = [
 
 $arr1Params = ' is good!';
 // foreach($arr1 as $k=>$a){
-//     $arr1[$k] = $a . $arr1Params;
+//     $arr1[$k]['name'] = $a['name'] . $arr1Params;
 // }
 // print_r($arr1);
 
 array_walk($arr1, function (&$v) use ($arr1Params) {
-    $v .= ' is good!';
+    $v['name'] .= ' is good!';
 });
 print_r($arr1);
 

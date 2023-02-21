@@ -126,14 +126,14 @@ $arr1 = [
 
 $arr1Params = ' is good!';
 // foreach($arr1 as $k=>$a){
-//     $arr1[$k] = $a . $arr1Params;
+//     $arr1[$k]['name'] = $a['name'] . $arr1Params;
 // }
 // print_r($arr1);
 
 array_walk($arr1, function (&$v) use ($arr1Params) {
-    $v .= ' is good!';
+    $v['name'] .= ' is good!';
 });
-print_r($arr1);
+print_r($arr1);exit;
 
 class B
 {}
@@ -194,8 +194,8 @@ $fib = function ($n) use (&$fib) {
 echo $fib(10);
 
 https://www.php.net/manual/zh/functions.anonymous.php#119388
-$fruits = ['apples', 'oranges'];
-$example = function () use ($fruits[0]) { // Parse error: syntax error, unexpected '[', expecting ',' or ')'
-    echo $fruits[0]; 
-};
-$example();
+// $fruits = ['apples', 'oranges'];
+// $example = function () use ($fruits[0]) { // Parse error: syntax error, unexpected '[', expecting ',' or ')'
+//     echo $fruits[0]; 
+// };
+// $example();
