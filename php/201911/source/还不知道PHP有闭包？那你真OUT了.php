@@ -133,7 +133,7 @@ $arr1Params = ' is good!';
 array_walk($arr1, function (&$v) use ($arr1Params) {
     $v['name'] .= ' is good!';
 });
-print_r($arr1);exit;
+print_r($arr1);
 
 class B
 {}
@@ -181,6 +181,7 @@ var_dump($bClass); // B
 var_dump($cClass); // C
 var_dump($dClass); // D
 var_dump($eClass); // NULL
+
 
 // https://www.php.net/manual/zh/functions.anonymous.php#100545
 $fib = function ($n) use (&$fib) {
