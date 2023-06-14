@@ -6,6 +6,9 @@ if (!$redis) {
 }
 
 // $cmd = "*1\r\n$4\r\nPING\r\n";
+// stream_socket_sendto($redis, $cmd);
+// echo stream_socket_recvfrom($redis, 4096);
+// exit;
 
 // $cmd = "";
 // if (count($argv) > 1) {
@@ -15,12 +18,11 @@ if (!$redis) {
 //         $cmd .= $argv[$i] . "\r\n";
 //     }
 // }
-// echo str_replace("\r\n", "\\r\\n",$cmd), PHP_EOL;
+// echo str_replace("\r\n", "\\r\\n", $cmd), PHP_EOL;
 
 // stream_socket_sendto($redis, $cmd);
 // echo stream_socket_recvfrom($redis, 4096);
 // exit;
-
 
 $cmd = "";
 if (count($argv) > 1) {
@@ -39,16 +41,25 @@ if ($cmd) {
 //    print_r($ret);
     if (count($ret) == 1) {
         $ret = $ret[0];
-        if (strpos($ret, "+") !== false) $ret = str_replace("+", "成功：", $ret);
-        if (strpos($ret, "-") !== false) $ret = str_replace("-", "失败，原因是：", $ret);
-        if (strpos($ret, ":") !== false) $ret = str_replace(":", "操作数量：", $ret);
+        if (strpos($ret, "+") !== false) {
+            $ret = str_replace("+", "成功：", $ret);
+        }
+
+        if (strpos($ret, "-") !== false) {
+            $ret = str_replace("-", "失败，原因是：", $ret);
+        }
+
+        if (strpos($ret, ":") !== false) {
+            $ret = str_replace(":", "操作数量：", $ret);
+        }
+
         echo $ret, PHP_EOL;
     } else {
         if (strpos($ret[0], "*") !== false) {
             $response = [];
             $i = 0;
-            foreach($ret as $v){
-                if ($i == 0 || $i % 2 != 0 ) {
+            foreach ($ret as $v) {
+                if ($i == 0 || $i % 2 != 0) {
                     $i++;
                     continue;
                 }
@@ -62,5 +73,3 @@ if ($cmd) {
     }
 
 }
-
-
