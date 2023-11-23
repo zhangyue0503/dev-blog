@@ -2,15 +2,18 @@
 
 require_once 'vendor/autoload.php';
 
-// $xs = new XS("./config/5-zyarticle-test1.ini");
-$xs = new XS("./config/zyarticle.ini");
+$xs = new XS("./config/5-zyarticle-test1.ini");
+// $xs = new XS("./config/zyarticle.ini");
 // var_dump($xs->index);
 
 // exit;
 
+
+
+
 if($argv[1] == '1'){
 $dns = 'mysql:host=localhost;dbname=zyblog;port=3306;charset=utf8';
-$pdo = new PDO($dns, 'root', '', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
+$pdo = new PDO($dns, 'root', '123456', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
 
 
 $stmt = $pdo->prepare("select * from zy_articles_xs_test where status = 1");
@@ -23,6 +26,7 @@ $xs->index->clean();
 
 foreach($list as $v){
     $v['content'] = strip_tags($v['content']);
+    // $v['sortid'] = $v['id'];
     $doc = new XSDocument($v);
     $xs->index->add($doc);
 }
@@ -57,9 +61,11 @@ echo '索引建立完成！';
         'category_name'=>'时实时'
     ]);
     $xs->index->add($doc);
+}else if($argv[1] == 3){
+$docs = $xs->search->search('');
+var_dump($docs[0]->content);
 }
-// $docs = $xs->search->search('');
-// var_dump($docs[0]->content);
+
 
 // var_dump($docs[0]->f($xs->getFieldBody()));
 

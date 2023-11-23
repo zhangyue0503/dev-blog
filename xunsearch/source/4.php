@@ -56,19 +56,19 @@ if($argv[2]){
     $xs->index->clean();
     $data = [
         [
-            'ppid'=>1,
+            'pid'=>1,
             'subject'=>'三号DEMO的，关于 xunsearch 的 DEMO 项目测试',
             'message'=>'项目测试是一个很有意思的行为！',
             'chrono'=>1,
             'author'=>'zyblog',
         ],[
-            'ppid'=>2,
+            'pid'=>2,
             'subject'=>'三号DEMO的，测试第二篇',
             'message'=>'这里是第二篇文章的内容',
             'chrono'=>1314336160,
             // 'author'=>'zyblog',
         ],[
-            'ppid'=>3,
+            'pid'=>3,
             'subject'=>'三号DEMO的，项目测试第三篇',
             'message'=>'俗话说，无三不成礼，所以就有了第三篇',
             'chrono'=>123,
