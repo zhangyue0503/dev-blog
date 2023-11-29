@@ -26,9 +26,10 @@ $xs->index->clean();
 
 foreach($list as $v){
     $v['content'] = strip_tags($v['content']);
-    // $v['sortid'] = $v['id'];
+    $v['sortid'] = "00".$v['id'];
     $doc = new XSDocument($v);
     $xs->index->add($doc);
+    var_dump($xs->index);
 }
 
 echo '索引建立完成！';
@@ -62,8 +63,8 @@ echo '索引建立完成！';
     ]);
     $xs->index->add($doc);
 }else if($argv[1] == 3){
-$docs = $xs->search->search('');
-var_dump($docs[0]->content);
+$docs = $xs->search->setQuery('')->setLimit(20,0)->setSort('sortid',true)->search();
+var_dump($docs);
 }
 
 
