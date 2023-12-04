@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-$xs = new XS("./config/zyarticle.ini");
+$xs = new XS("./config/5-zyarticle-test1.ini");
 
 if ($argv[1] == 1){
     var_dump($xs);
@@ -201,7 +201,7 @@ if ($argv[1] == 1){
 
     $s1 = new XSFieldScheme;
     $s1->addField('date_test');
-    // $s1->addField('pid', ['type'=>'id']); // 打开注释，结果就是 true 了
+    $s1->addField('pid', ['type'=>'id']); // 打开注释，结果就是 true 了
     var_dump($s1->checkValid()); // bool(false)
 
 }
