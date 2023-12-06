@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-$xs = new XS("./config/zyarticle.ini");
+$xs = new XS("./config/5-zyarticle-test1.ini");
 
 if ($argv[1] == 1){
     var_dump($xs->index);
@@ -28,10 +28,11 @@ if ($argv[1] == 1){
     ]);
     $xs->index->add($doc);
 }
-// print_r($xs->search->search('id:100002'));
+
+// print_r($xs->search->search('id:100002'));exit;
 print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
     // print_r($xs->search->setDb('zydb')->search(''));
-    
+    exit;
 }else if($argv[1] == 3){
     $doc = new XSDocument([
         'id'=>123123,
@@ -108,7 +109,7 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
     // )
 
     echo $searchDoc[0]->percent(); // 100
-
+// exit;
 
 
     // $doc2 = new XSDocument(['id'=>800001,'title'=>'测试250',], 'GBK');
@@ -146,6 +147,7 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
     // $xs->index->add($zydoc);
     // // before，数据还没有被到服务端哦！！！
     // // after，数据被提交到服务端了哦！！！
+    // exit;
 
     $doc3 = new XSDocument(['title'=>'最后的测试了','content'=>'主要试一下附加索引词和附加索引文本','id'=>800008]);
     $doc3->addIndex('title', '奇怪的知识又增加了');
@@ -178,9 +180,9 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 
     print_r($doc3);
 
-    // $xs->index->add($doc3);
+    // $xs->index->add($doc3);exit;
 
-    var_dump($xs->search->search('id:800005')[0]);
+    // var_dump($xs->search->search('id:800008'));exit;
     // object(XSDocument)#13 (5) {
     //     ["_data":"XSDocument":private]=>
     //     array(3) {
@@ -212,27 +214,27 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
     //     }
     //   }
     
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "说话"  
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "奇怪的知识"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "说话"  
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "奇怪的知识"
     # 查不到
 
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "title:说话"
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "title:奇怪的知识"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "title:说话"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "title:奇怪的知识"
     // 可以查到
 
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "印度"
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "我爱北京天安门"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "印度"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "我爱北京天安门"
     // 可以查到
 
     // 源代码中，混合区索引 vno 是 255 ，both 索引在附加索引相关的代码中缺少混合区标签判断，只有是完全的混合区的字段 index=mixed 的才会索引到混合区可以被搜索，
 
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "小日子过得不错的RB人"
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "title:小日子过得不错的RB人"
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "印度喜欢吃咖喱" // 查不到
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "小日子过得不错的RB人"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "title:小日子过得不错的RB人"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "印度喜欢吃咖喱" // 查不到
     # 查不到
 
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "title:日子"
-    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/zyarticle.ini "印度"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "title:日子"
+    // php vendor/hightman/xunsearch/util/Quest.php --show-query ./config/5-zyarticle-test1.ini "印度"
     # 能查到
 
     // term 分词，比如：印度喜欢吃咖喱、小日子过得不错的RB人，会以整词做倒排索引，但查询时会分词
@@ -240,13 +242,17 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
     // ES 中也有这个问题
 
     // 搜索时强制增加一个完整的 term 
+    
     print_r($xs->search->setFuzzy()->search('印度喜欢吃咖喱'));  // 能查到
-    print_r($xs->search->setFuzzy()->addQueryTerm('title', '印度喜欢吃咖喱')->search('')); // 能查到
+    echo '=============', PHP_EOL;
+    print_r($xs->search->setFuzzy()->addQueryTerm('content', '印度喜欢吃咖喱')->search()); // 能查到
 
-    print_r($xs->search->addQueryTerm('title', '小日子过得不错的RB人')->search('')); // 查不到
-    print_r($xs->search->addQueryTerm('title', '小日子过得不错的rb人')->search('')); // 能查到
-
-   
+    print_r($xs->search->addQueryTerm('title', '小日子过得不错的RB人')->search()); // 查不到
+    // $xs->search->setQuery('');
+    print_r($xs->search->addQueryTerm('title', '小日子过得不错的rb人')->search()); // 能查到
+    
+//     echo $xs->search->getQuery();
+//    exit;
     
 
 
@@ -300,7 +306,6 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 //     }
 //   }
 // }
-
 // POST demo1/_doc
 // {
 //   "pid":1,
@@ -308,7 +313,6 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 //   "message":"项目测试是一个很有意思的行为！",
 //   "chrono":1314336158
 // }
-
 // POST demo1/_doc
 // {
 //   "pid":2,
@@ -316,7 +320,6 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 //   "message":"这里是第二篇文章的内容",
 //   "chrono":1314336160
 // }
-
 // POST demo1/_doc
 // {
 //   "pid":3,
@@ -324,7 +327,6 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 //   "message":"俗话说，无三不成礼，所以就有了第三篇",
 //   "chrono":1314336168
 // }
-
 // # 查不到
 // GET demo1/_search
 // {
@@ -334,8 +336,7 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 //     }
 //   }
 // }
-
-# 正常
+// # 正常
 // GET demo1/_search
 // {
 //   "query":{
@@ -352,7 +353,6 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 //     }
 //   }
 // }
-
 // # 查不到
 // GET demo1/_search
 // {
@@ -369,4 +369,5 @@ print_r($xs->search->addDb('zydb')->setSort('pub_time',false)->search(''));
 //       "subject.keyword" :"测试第二篇abc"
 //     }
 //   }
+// }
 
