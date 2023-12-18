@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-$xs = new XS("./config/zyarticle.ini");
+$xs = new XS("./config/5-zyarticle-test1.ini");
 
 if ($argv[1] == 1) {
     // $xs->index->clean();
@@ -14,7 +14,7 @@ if ($argv[1] == 1) {
     // $xs->index->add(new XSDocument([
     //     'id'=>uniqid(),
     //     'title'=>'PHP是最强的Web编程语言',
-    //     'content'=>'你敢信？',source/10.php
+    //     'content'=>'你敢信？',
     // ]));
     // $xs->index->add(new XSDocument([
     //     'id'=>uniqid(),
@@ -26,6 +26,7 @@ if ($argv[1] == 1) {
     // $xs->index->addSynonym("最好","最棒");
 
     // $xs->index->addSynonym("最棒","最强");
+    // exit;
 
     print_r($xs->search->setAutoSynonyms()->search('最好'));
     // 三条数据
@@ -39,7 +40,7 @@ if ($argv[1] == 1) {
     print_r($xs->search->setQuery('最好')->getQuery());
     // Query((最好@1 SYNONYM 最强@78 SYNONYM 最棒@79))
 
-    $xs->search->setAutoSynonyms(false);
+    // $xs->search->setAutoSynonyms(false);
     print_r($xs->search->search('最好')); // 恢复成一条了
 
     print_r($xs->search->setQuery('最好')->getQuery());
@@ -111,5 +112,6 @@ if ($argv[1] == 1) {
 } else if ($argv[1] == 4) {
     var_dump($xs->index->flushLogging());
 } else if ($argv[1] == 5) {
+    // 还可以清空搜索日志
     $xs->index->setDb(XSSearch::LOG_DB)->clean();
 }

@@ -2,24 +2,24 @@
 
 require_once 'vendor/autoload.php';
 
-$xs = new XS("./config/zyarticle.ini");
+$xs = new XS("./config/5-zyarticle-test1.ini");
 $search = $xs->search;
 
 if ($argv[1] == 1){
     
     
-    $search->setQuery('敏捷')->search();
+    $search->setQuery('设计模式')->search();
 
-    $search->search('敏捷');
+    $search->search('设计模式');
     print_r($search->lastCount); // 37
 
     $search->search('算法');
     print_r($search->lastCount); // 63
 
-    $search->setQuery('敏捷')->search('算法');
+    $search->setQuery('设计模式')->search('算法');
     print_r($search->lastCount); // 63
 
-    print_r($search->setQuery('敏捷')->setLimit(1000)->search('算法'));
+    print_r($search->setQuery('设计模式')->setLimit(1000)->search('算法'));
     // ……………………
     print_r($search->setLimit(1000)->search());
     // exit;
@@ -52,19 +52,19 @@ if ($argv[1] == 1){
     echo $search->highlight($doc->content,true);
     echo PHP_EOL;
 
-    $doc = $search->setLimit(1)->search('敏捷', false)[0];
+    $doc = $search->setLimit(1)->search('可变变量', false)[0];
     echo $search->highlight($doc->title);
-    // 【敏捷1.4】敏捷开发环境：领导<em>与</em>团队
+    // PHP的可变变量<em>与</em>可变函数
     echo PHP_EOL;
 
     $search->setLimit(1)->search('');
     echo $search->highlight($doc->title);
-    // 【敏捷1.4】敏捷开发环境：领导与团队
+    // PHP的可变变量与可变函数
     echo PHP_EOL;
 
     // 折叠
 
-    $docs = $search->setCollapse('category_name')->search('工程');
+    $docs = $search->setCollapse('category_name')->search('');
     foreach ($docs as $doc)
     {
         echo '分类：'.$doc->category_name.' 下有 ' . ($doc->ccount() + 1)  . ' 条匹配结果。',PHP_EOL;
@@ -91,4 +91,8 @@ if ($argv[1] == 1){
         ]));
     }
     $xs->index->closeBuffer();
+}else if($argv[1]==4){
+    $xs = new XS("demo");
+    
+    print_r($xs->search->setLimit(10,20000)->search());
 }

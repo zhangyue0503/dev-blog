@@ -29,7 +29,7 @@ foreach($list as $v){
     $v['sortid'] = "00".$v['id'];
     $doc = new XSDocument($v);
     $xs->index->add($doc);
-    var_dump($xs->index);
+    // var_dump($xs->index);
 }
 
 echo '索引建立完成！';
