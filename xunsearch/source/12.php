@@ -134,7 +134,7 @@ if ($argv[1] == 1){
     // Query((((数据结构@1 SYNONYM (数据@78 AND 结构@79)) AND 与@2 AND 算法@3) FILTER id:[1,100]))
 
     print_r($search->setQuery('数据结构与算法')->setLimit(1)->search()); // id 1 
-    print_r($search->setQuery('数据结构与算法')->addWeight('content', '设计', 10)->setLimit(1)->getQuery()); // id 232
+    print_r($search->setQuery('数据结构与算法')->addWeight('content', '设计', 10)->setLimit(1)->search()); // id 232
 
 
 
@@ -142,7 +142,7 @@ if ($argv[1] == 1){
 }else if($argv[1] == 4){
     $search->setQuery('PHP')->setFacets(['category_name', 'tags'])->search();
 
-    print_r($search->setQuery('PHP category_name:项目产品')->search());
+    // print_r($search->setQuery('PHP category_name:项目产品')->search());
 
     $cates = $search->getFacets('category_name');
     foreach($cates as $c=>$count){

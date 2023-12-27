@@ -77,7 +77,7 @@ if ($argv[1] == 1){
     // )
 
 
-    print_r($search->setLimit(10, 20)->search('数据结构与算法')[9]->rank()); // 30
+    print_r($search->setLimit(10, 20)->search('数据结构与算法')[0]->rank()); // 30
 
     
 }
