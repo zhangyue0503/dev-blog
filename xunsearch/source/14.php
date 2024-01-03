@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-$xs = new XS("./config/zyarticle.ini");
+$xs = new XS("./config/5-zyarticle-test1.ini");
 $search = $xs->search;
 
 if ($argv[1] == 1){

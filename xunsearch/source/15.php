@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-$xs = new XS("./config/zyarticle.ini");
+$xs = new XS("./config/5-zyarticle-test1.ini");
 $search = $xs->search;
 
 if ($argv[1] == 1){
@@ -36,7 +36,7 @@ if ($argv[1] == 1){
 
     echo $search->count('算法'), PHP_EOL; // 63
     echo $search->setCutOff(95)->count('算法'), PHP_EOL; // 12
-    echo $search->setCutOff(95,2.821)->count('算法'), PHP_EOL; // 7
+    echo $search->setCutOff(95,2)->count('算法'), PHP_EOL; // 7
     $search->setCutOff(0,0);
 
     
@@ -101,13 +101,13 @@ if ($argv[1] == 1){
     print_r($search->setFuzzy()->setAutoSynonyms()->setQuery('敏捷最好')->search());
     print_r($search->setAutoSynonyms()->setSynonymScale(0.01)->setQuery('敏捷最好')->search());
     // 没效果
-
+// exit;
     $search->setFuzzy(false)->setAutoSynonyms(false);
     
-    echo $search->setWeightingScheme(0)->search('敏捷')[0]->id, PHP_EOL; // 238
-    echo $search->setWeightingScheme(1)->search('敏捷')[0]->id, PHP_EOL; // 234
-    echo $search->setWeightingScheme(2)->search('敏捷')[0]->id, PHP_EOL; // 234
-
+    echo $search->setWeightingScheme(0)->search('算法')[0]->id, PHP_EOL; // 238
+    echo $search->setWeightingScheme(1)->search('算法')[0]->id, PHP_EOL; // 234
+    echo $search->setWeightingScheme(2)->search('算法')[0]->id, PHP_EOL; // 234
+// exit;
     print_r($search->terms()); 
     // Array
     // (
@@ -127,38 +127,38 @@ if ($argv[1] == 1){
     //     [4] => 结构
     // )
 
-
+// exit;
     // setGeodistSort
-    $xs = new XS("./config/zyarticle.ini");
+    $xs = new XS("./config/5-zyarticle-test1.ini");
 $search = $xs->search;
 
     $scheme = $xs->scheme;
     $scheme->addField(new XSFieldMeta('lon', ['type'=>'numeric']));
     $scheme->addField(new XSFieldMeta('lat', ['type'=>'numeric']));
 
-    $xs->index->clean();
-    $xs->index->add(new XSDocument([
-        'id'=>uniqid(),
-        'title'=>'五一广场',
-        'content'=>'五一广场',
-        'lon'=>112.983037,
-        'lat'=>28.198986,
-    ]));
-    $xs->index->add(new XSDocument([
-        'id'=>uniqid(),
-        'title'=>'长沙火车站',
-        'content'=>'长沙火车站',
-        'lon'=>113.017496,
-        'lat'=>28.199495,
-    ]));
-    $xs->index->add(new XSDocument([
-        'id'=>uniqid(),
-        'title'=>'南门口',
-        'content'=>'南门口',
-        'lon'=>112.982875,
-        'lat'=>28.188591,
-    ]));
-    $xs->index->flushIndex();
+//     $xs->index->clean();
+//     $xs->index->add(new XSDocument([
+//         'id'=>uniqid(),
+//         'title'=>'五一广场',
+//         'content'=>'五一广场',
+//         'lon'=>112.983037,
+//         'lat'=>28.198986,
+//     ]));
+//     $xs->index->add(new XSDocument([
+//         'id'=>uniqid(),
+//         'title'=>'长沙火车站',
+//         'content'=>'长沙火车站',
+//         'lon'=>113.017496,
+//         'lat'=>28.199495,
+//     ]));
+//     $xs->index->add(new XSDocument([
+//         'id'=>uniqid(),
+//         'title'=>'南门口',
+//         'content'=>'南门口',
+//         'lon'=>112.982875,
+//         'lat'=>28.188591,
+//     ]));
+//     $xs->index->flushIndex();
 
     // 长沙南站    长沙火车站->南门口->五一广场
     print_r($search->setGeodistSort(['lon'=>113.071808,'lat'=>28.153261])->setQuery('')->search());

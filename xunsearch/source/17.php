@@ -5,7 +5,8 @@ require_once 'vendor/autoload.php';
 $xs = new XS("./config/demo3_56.101.ini");
 
 if ($argv[1] == 1){
-    print_r($xs->index->getCutomDict());
+    print_r($xs->index);
+    print_r($xs->index->getCustomDict());
 
     $dict = <<<EOF
     无三不
@@ -26,6 +27,8 @@ if ($argv[1] == 1){
 } else if($argv[1]==2){
     var_dump($xs->getFieldTitle()->getCustomTokenizer());
     // object(XSTokenizerJieba)#9 (0) {}
+
+    var_dump($xs->search->search('话说'));
 
     var_dump((new XSTokenizerJieba())->getTokens('俗话说，无三不成礼，所以就有了第三篇'));
     // array(11) {

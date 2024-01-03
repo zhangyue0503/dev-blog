@@ -7,7 +7,7 @@ $search = $xs->search;
 
 if ($argv[1] == 1){
 
-    $search->setScwsMulti(15);
+    $search->setScwsMulti(2);
     echo $search->setQuery("我是中国人，中华人民共和国")->getQuery(), PHP_EOL;
     // Query((我是@1 AND (中国人@2 SYNONYM (中国@79 AND 国人@80)) AND (中华人民共和国@3 SYNONYM (中华@80 AND 华人@81 AND 人民@82 AND 民共@83 AND 共和@84 AND 和国@85))))
 }else if ($argv[1] == 2){
