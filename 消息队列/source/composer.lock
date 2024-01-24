@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9485da818cbe433832d6fbfc0f1fff3d",
+    "content-hash": "d3e0868930d0464e2e5f64f7df4a20fb",
     "packages": [
         {
             "name": "paragonie/constant_time_encoding",
@@ -125,22 +125,28 @@
         },
         {
             "name": "php-amqplib/php-amqplib",
-            "version": "v3.4.0",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-amqplib/php-amqplib.git",
-                "reference": "5c537cb724f2e181183c202e63f4303935344c5f"
+                "reference": "fb84e99589de0904a25861451b0552f806284ee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-amqplib/php-amqplib/zipball/5c537cb724f2e181183c202e63f4303935344c5f",
-                "reference": "5c537cb724f2e181183c202e63f4303935344c5f",
-                "shasum": ""
+                "url": "https://api.github.com/repos/php-amqplib/php-amqplib/zipball/fb84e99589de0904a25861451b0552f806284ee5",
+                "reference": "fb84e99589de0904a25861451b0552f806284ee5",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ext-mbstring": "*",
                 "ext-sockets": "*",
-                "php": "^7.1||^8.0",
+                "php": "^7.2||^8.0",
                 "phpseclib/phpseclib": "^2.0|^3.0"
             },
             "conflict": {
@@ -200,9 +206,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-amqplib/php-amqplib/issues",
-                "source": "https://github.com/php-amqplib/php-amqplib/tree/v3.4.0"
+                "source": "https://github.com/php-amqplib/php-amqplib/tree/v3.6.0"
             },
-            "time": "2022-10-18T20:52:02+00:00"
+            "time": "2023-10-22T15:02:02+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -321,7 +327,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-redis": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

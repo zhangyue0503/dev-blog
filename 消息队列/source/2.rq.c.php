@@ -8,7 +8,7 @@ $channel = $connection->channel(); // 获取频道
 
 // 定义队列
 //$channel->queue_delete('hello');
-$channel->queue_declare('hello', false, true, false, false);
+$channel->queue_declare('hello', false, false, false, false);
 
 echo "等待消息，或者使用 Ctrl+C 退出程序。", PHP_EOL;
 

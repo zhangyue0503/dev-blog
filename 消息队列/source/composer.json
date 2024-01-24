@@ -1,6 +1,6 @@
 {
     "require": {
-        "php-amqplib/php-amqplib": "^3.4",
+        "php-amqplib/php-amqplib": "^3.6",
       "ext-redis": "*"
     }
 }

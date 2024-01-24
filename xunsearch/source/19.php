@@ -24,16 +24,11 @@ $tnt->loadConfig([
     'host'      => 'localhost',
     'database'  => 'zyblog',
     'username'  => 'root',
-    'password'  => '',
+    'password'  => '123456',
     'storage'   => './',
     'tokenizer' => JiebaTokenizer::class,
     'stemmer'   => \TeamTNT\TNTSearch\Stemmer\PorterStemmer::class//optional
 ]);
-
-
-
-
-
 
 
 
