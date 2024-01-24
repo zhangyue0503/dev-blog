@@ -21,7 +21,8 @@ $callback = function ($msg) {
     $msg->ack();
 };
 
-// 消费队列，获取到数据将调用 callback 回调函数
+// 消费队列，获取到数据将调用 callback 回调函数  
+//                                         第二个false这里是 no_ack参数
 $channel->basic_consume('hello4', '', false, false, false, false, $callback);
 
 // 频道是开启状态时，挂起程序，不停地执行

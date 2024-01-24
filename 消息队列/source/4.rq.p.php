@@ -16,7 +16,11 @@ $channel->confirm_select();
 //$channel->queue_delete('hello');
 //$channel->exchange_delete('ex1');
 //$channel->exchange_declare('ex1', 'direct');
-$channel->queue_declare('hello4', false, false, false, false);
+$channel->queue_declare('hello4', false, true, false, false);
+
+// $channel->queue_declare('hello4', false, true, false, false);
+
+
 //$channel->queue_bind('hello', 'ex1', 'h1');
 
 
@@ -38,7 +42,9 @@ $channel->set_nack_handler(
 
 
 // 创建消息
+// $msg = new AMQPMessage('Hello World!');
 $msg = new AMQPMessage('Hello World!', ['delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT]);
+
 $channel->basic_publish($msg, '', 'hello4'); // 将消息放入队列中
 //$channel->wait_for_pending_acks(5);
 
