@@ -24,7 +24,7 @@ echo "等待消息，或者使用 Ctrl+C 退出程序。", PHP_EOL;
 $callback = function ($msg) {
 //    echo '接收到数据： ', $msg->body, PHP_EOL;
 //    $msg->ack();
-//    $msg->nack();
+   $msg->nack();
 };
 
 // 消费队列，获取到数据将调用 callback 回调函数

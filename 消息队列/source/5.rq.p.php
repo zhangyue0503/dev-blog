@@ -19,9 +19,9 @@ $channel->queue_declare('hello5', false, true, false, false, false, new AMQPTabl
 
 // 创建消息
 $msg = new AMQPMessage('Hello World!');
-//$msg = new AMQPMessage('Hello World!' . time(),[
-//    'expiration'=> 3000,
-//]);
+$msg = new AMQPMessage('Hello World!' . time(),[
+   'expiration'=> 3000,
+]);
 $channel->basic_publish($msg, '', 'hello5'); // 将消息放入队列中
 
 echo "生产者向消息队列中发送信息：Hello World！";
