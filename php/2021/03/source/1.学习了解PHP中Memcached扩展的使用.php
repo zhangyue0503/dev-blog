@@ -1,5 +1,9 @@
 <?php
 
+// apt install memcached libmemcached-dev 
+// pecl install memcached
+// pecl install memcache
+
 $m = new Memcached();
 $m->addServer('127.0.0.1', '11211');
 
