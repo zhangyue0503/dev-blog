@@ -2,8 +2,8 @@
 
 // session_name('session_id');
 
-session_module_name('redis');
-session_save_path('tcp://127.0.0.1:6379');
+// session_module_name('redis');
+// session_save_path('tcp://127.0.0.1:6379');
 
 session_start();
 
@@ -30,9 +30,14 @@ $a = $_SESSION['A'];
 // print_r($_SESSION);
 // echo $a, "<br/>";
 
-session_unset();
-print_r($_SESSION);
-echo $a, "<br/>";
+// session_unset();
+// print_r($_SESSION);
+// echo $a, "<br/>";
+
+session_regenerate_id(true);
+
+echo session_name(), "=", session_id(), "<br/>"; // PHPSESSID=i3tdf5bmmdq8eduh56ja7s87ka
+
 
 ?>
 <a href="41.php?r=<?php echo rand(); ?>">Cookie传输</a>

@@ -371,4 +371,4 @@ preg_match("///", $str);
 print_r(preg_last_error()); 
 // Warning: preg_match(): Delimiter must not be alphanumeric or backslash in /Users/zhangyue/MyDoc/博客文章/dev-blog/php/2021/03/source/6.PHP中PRGE正则函数的学习.php on line 332
 // 1
-// print_r(preg_last_error_msg());  // php8
+print_r(preg_last_error_msg());  // php8

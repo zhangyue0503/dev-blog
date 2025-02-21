@@ -86,26 +86,26 @@ var_dump(getservbyport(80, 'tcp')); // string(4) "http"
 // php -S localhost:8081 2.PHP中的网络组件相关函数.php
 
 // 获取当前状态码，并设置新的状态码
-var_dump(http_response_code(404)); //  int(200)
+// var_dump(http_response_code(404)); //  int(200)
 
-//获取新的状态码
-var_dump(http_response_code()); //  int(404)
+// //获取新的状态码
+// var_dump(http_response_code()); //  int(404)
 
-header("Test1: Info1");
-header("Test2: Info2");
-header("Test3: Info3");
+// header("Test1: Info1");
+// header("Test2: Info2");
+// header("Test3: Info3");
 
-header_remove("Test2");
+// header_remove("Test2");
 
-var_dump(headers_list());
-// array(3) {
-//     [0]=>
-//     string(23) "X-Powered-By: PHP/7.3.9"
-//     [1]=>
-//     string(12) "Test1: Info1"
-//     [2]=>
-//     string(12) "Test3: Info3"
-//   }
+// var_dump(headers_list());
+// // array(3) {
+// //     [0]=>
+// //     string(23) "X-Powered-By: PHP/7.3.9"
+// //     [1]=>
+// //     string(12) "Test1: Info1"
+// //     [2]=>
+// //     string(12) "Test3: Info3"
+// //   }
 
 setcookie("CK_TEST1", "Cookie1=?---&&f");
-setrawcookie("CK_TEST1", "Cookie2=?---&&f");
+setrawcookie("CK_TEST2", "Cookie2=?---&&f");
